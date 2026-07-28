@@ -1,4 +1,4 @@
-const CACHE_NAME = "wenatchee-teen-activities-v2";
+const CACHE_NAME = "wenatchee-teen-activities-v3";
 const APP_SHELL = [
   "./",
   "./index.html",
@@ -35,6 +35,21 @@ self.addEventListener("fetch", event => {
   // Leave external source links to the network.
   if (requestUrl.origin !== self.location.origin) return;
 
+  // Network-first for page loads so updates appear immediately.
+  if (event.request.mode === "navigate" || requestUrl.pathname.endsWith("/index.html")) {
+    event.respondWith(
+      fetch(event.request)
+        .then(response => {
+          const copy = response.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(event.request, copy));
+          return response;
+        })
+        .catch(() => caches.match(event.request).then(c => c || caches.match("./index.html")))
+    );
+    return;
+  }
+
+  // Cache-first for everything else (icons, manifest).
   event.respondWith(
     caches.match(event.request).then(cached => {
       if (cached) return cached;

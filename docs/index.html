@@ -62,7 +62,7 @@
   .when .d{font-size:11px;color:var(--muted);margin-top:3px;font-weight:700;text-transform:uppercase}
   .title{font-weight:700;font-size:16px;margin:0 0 3px;line-height:1.25;padding-right:34px}
   .title a{text-decoration:none}
-  .meta{font-size:13.5px;color:var(--muted)}
+  .meta{font-size:13.5px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .desc{font-size:13.5px;margin-top:6px;color:var(--ink);opacity:.86;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
   .badges{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
   .b{font-size:11.5px;font-weight:700;padding:3px 7px;border-radius:7px;background:var(--chip)}
@@ -176,7 +176,8 @@ function ago(iso){
   const h=Math.round(m/60); if(h<36) return h+" hr ago";
   return Math.round(h/24)+" days ago";
 }
-const isNew = e => { const f=D(e.firstSeen); return (Date.now()-f < 4*864e5) || (prevVisit && f > D(prevVisit)); };
+let BASELINE = 0;  // first scan: nothing counts as "new" until it shows up in a later scan
+const isNew = e => { const f=D(e.firstSeen).getTime(); if(f - BASELINE < 6*36e5) return false; return (Date.now()-f < 7*864e5) || (prevVisit && f > D(prevVisit).getTime()); };
 
 /* ---------- filtering ---------- */
 const normT = t => t.toLowerCase().replace(/[^a-z0-9 ]/g," ").replace(/\b(the|a|an|at|and|with|live)\b/g," ").replace(/\s+/g," ").trim();
@@ -210,8 +211,7 @@ function card(e, opts={}){
   const where = [e.venue, e.town].filter(Boolean).join(" · ");
   const badges = [];
   if(isNew(e)) badges.push(`<span class="b new">🆕 New</span>`);
-  if(e.big && e.ticketed) badges.push(`<span class="b tix">🎟 Tickets</span>`);
-  else if(e.big) badges.push(`<span class="b tix">⭐ Big event</span>`);
+  if(e.ticketed && !e.big && !e.ticketUrl) badges.push(`<span class="b tix">🎟 Tickets</span>`);
   if(e.foodTruck) badges.push(`<span class="b truck">🚚 Food truck</span>`);
   if(e.free) badges.push(`<span class="b free">Free</span>`);
   if(e.cost && !e.free) badges.push(`<span class="b">${esc(e.cost)}</span>`);
@@ -343,6 +343,7 @@ async function load(manual){
     DATA = await r.json();
     if(!DATA.events) DATA.events = [];
     if(!DATA.sources) DATA.sources = [];
+    BASELINE = DATA.events.reduce((m,e)=>Math.min(m, D(e.firstSeen).getTime()), Infinity);
     renderMeta(); render();
     if(manual) toast(DATA.updated ? `Refreshed. Latest scan was ${ago(DATA.updated)}.` : "No scan yet. Tap “Scan now on GitHub”.");
   }catch(err){

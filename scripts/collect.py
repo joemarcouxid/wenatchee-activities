@@ -74,7 +74,7 @@ CATS = [
     ("sports", ["5k", "10k", "half marathon", "marathon", "race", "fun run", "tournament", " vs ", " vs.", "hockey", "wild ",
                 "applesox", "basketball", "football", "soccer", "volleyball", "rodeo", "golf", "triathlon", "pickleball"]),
     ("arts", ["theater", "theatre", "art ", "arts", "gallery", "museum", "film", "movie", "comedy", "dance", "ballet",
-              "craft", "workshop", "glass", "paint", "book signing", "poetry", "musical", "play ", "improv", "author", "pottery", "photography"]),
+              "craft", "workshop", "glassblowing", "paint night", "painting", "book signing", "poetry", "musical", "play ", "improv", "author", "pottery", "photography"]),
     ("markets", ["market", "bazaar", "fair", "farmers", "vendor", "swap", "flea", "holiday shopping", "artisan"]),
     ("festivals", ["festival", "fest", "parade", "celebration", "oktoberfest", "christmas", "village of lights", "holiday", "karneval",
                    "fireworks", "tree lighting", "winterfest", "4th of july", "fourth of july", "blossom", "salmon fest", "halloween", "new year"]),
@@ -98,7 +98,7 @@ def categorize(e):
     big_venue = any(v in t for v in BIG_VENUES)
     showy = any(c in e["cats"] for c in ("music", "arts", "festivals", "sports"))
     e["ticketed"] = ticketed and not e["free"]
-    lesson = re.search(r"\b(class|classes|workshop|lesson|camp|yoga|make a|make your own|date night|clinic|meeting|bingo|trivia|happy hour|open mic|demo)", e["title"].lower())
+    lesson = re.search(r"\b(class|classes|workshop|lesson|camp|yoga|make a|make your own|date night|clinic|meeting|bingo|trivia|happy hour|open mic|demo|skate|storytime|story time|club|book club|meetup|support group|tutoring|practice|tryout|volunteer)", e["title"].lower())
     e["big"] = bool(not lesson and (big_venue or (not e["free"] and (e.get("_concerts") or (e["ticketed"] and showy)))))
 
 

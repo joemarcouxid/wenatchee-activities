@@ -7,7 +7,7 @@ X-WR-TIMEZONE:America/Los_Angeles
 REFRESH-INTERVAL;VALUE=DURATION:PT6H
 BEGIN:VEVENT
 UID:a256abe15ee0@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20260926
 DTEND;VALUE=DATE:20270328
 SUMMARY:Wenatchee Wild vs. Everett Silvertips
@@ -22,7 +22,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f0c884940e7c@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261129
 SUMMARY:Penticton Vees at Wenatchee Wild at Town Toyota Center
@@ -37,7 +37,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d4f5e180c3eb@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261114T000000Z
 DTEND:20261114T030000Z
 SUMMARY:Live Music w/ Ray Glover
@@ -52,7 +52,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c32ade2001cb@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261114T030000Z
 DTEND:20261114T050000Z
 SUMMARY:Dwight Yoakam @ Town Toyota Center
@@ -66,8 +66,23 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:a14e81507d6b@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261114T033000Z
+DTEND:20261114T050000Z
+SUMMARY:Lights Out Teen Skate 🌌⛸️ - Town Toyota Center's Weinstein Beverage Community Rink
+LOCATION:Wenatchee
+DESCRIPTION:Teen Lights Out Skate ❄️⛸️ Public Skate November Friday nights are better on the ice! 🎶✨ When the lights are out and the music is up\, the rink is the place to be! Grab your friends\, lace up your skates\, and get ready for a fun night of skating\, music\, and hanging out. Keep the Friday night fun…\nhttps://events.timely.fun/bm30tqng/event/78501123/20261113193000
+URL:https://events.timely.fun/bm30tqng/event/78501123/20261113193000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Lights Out Teen Skate 🌌⛸️ - Town Toyota Center's Weinstein Beverage Community Rink
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:eff2cbdab567@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261115
 SUMMARY:Holiday Open House & Wine Walk
@@ -82,12 +97,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:32d03a92adbf@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261115
 SUMMARY:Jazz Jam Quintet: Music and Dancing
 LOCATION:Studio 509 Dance\, Wenatchee
-DESCRIPTION:$23 Join us for a fun evening of live music and dancing to the Jazz Jam Quintet! Come dance or just watch from our onsite bar\, The Wallflower.\nhttps://happeningnext.com/event/jazz-jam-quintet-music-and-dancing-eid1ef0l8re1kla
+DESCRIPTION:$23 Join us for a fun evening of live music and dancing to the Jazz Jam Quintet! Come dance or just watch from our onsite bar\, The Wallflower.Agenda🕑: 07:00 PM - 08:00 PMBegin\nhttps://happeningnext.com/event/jazz-jam-quintet-music-and-dancing-eid1ef0l8re1kla
 URL:https://happeningnext.com/event/jazz-jam-quintet-music-and-dancing-eid1ef0l8re1kla
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -97,12 +112,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:85479b4008c4@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261114
 DTEND;VALUE=DATE:20261115
 SUMMARY:Wenatchee Wine and Food Festival
 LOCATION:Wenatchee Convention Center\, Wenatchee
-DESCRIPTION:$103 Foothills Magazine is proud to produce the Wenatchee Wine & Food Festival\, Eastern Washington’s premier food and wine event!\nhttps://happeningnext.com/event/wenatchee-wine-and-food-festival-eid1ef0l5rcffxr
+DESCRIPTION:$103 Foothills Magazine is proud to produce the Wenatchee Wine & Food Festival\, Eastern Washington’s premier food and wine event!About this EventFoothills Magazine is proud to produce the Wenatchee Wine & Food Fe\nhttps://happeningnext.com/event/wenatchee-wine-and-food-festival-eid1ef0l5rcffxr
 URL:https://happeningnext.com/event/wenatchee-wine-and-food-festival-eid1ef0l5rcffxr
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -112,7 +127,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:580f15409b07@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261114T170000Z
 DTEND:20261114T220000Z
 SUMMARY:Mountain Market at Mountain Springs Lodge
@@ -126,8 +141,23 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:f8b849754a83@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261114T200000Z
+DTEND:20261114T213000Z
+SUMMARY:Saturday Fall Skate ⛸️🍁 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+LOCATION:Wenatchee
+DESCRIPTION:Saturday Fall Skate ⛸️🍁 Public Skate Fall weekends are even better with a little time on the ice! 🍂⛸️ Gather your friends and family for an afternoon of skating\, laughter\, and fun at the rink. Whether you're finding your balance for the first time\, practicing your turns\, or enjoying a few laps with…\nhttps://events.timely.fun/bm30tqng/event/78501132/20261114120000
+URL:https://events.timely.fun/bm30tqng/event/78501132/20261114120000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Saturday Fall Skate ⛸️🍁 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:41721959b2f6@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261115T000000Z
 DTEND:20261115T050000Z
 SUMMARY:Warren Miller’s Days Off
@@ -141,8 +171,38 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:5fd99289211d@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261115T003000Z
+DTEND:20261115T020000Z
+SUMMARY:Autumn Evening Skate ⛸️🍂 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+LOCATION:Wenatchee
+DESCRIPTION:Autumn Evening Skate ⛸️🍂 Public Skate As the autumn sun starts to set\, the fun is just getting started at the rink! 🍁⛸️ Make your Saturday evening a little more exciting with an outing on the ice. Bring your family\, meet up with friends\, or enjoy some skating time on your own while making the most…\nhttps://events.timely.fun/bm30tqng/event/78501138/20261114163000
+URL:https://events.timely.fun/bm30tqng/event/78501138/20261114163000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Autumn Evening Skate ⛸️🍂 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:3a31c8651232@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261115T220000Z
+DTEND:20261115T233000Z
+SUMMARY:Fall Fun Sunday ⛸️🍁 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+LOCATION:Wenatchee
+DESCRIPTION:Fall Fun Sunday ⛸️🍁 Public Skate Looking for a fun way to spend your Sunday afternoon? 🍂⛸️ Bring a little excitement to your weekend with some time on the ice! From kids learning to skate to adults enjoying a few laps\, our Public Skate is a great opportunity for everyone to get moving\, have some…\nhttps://events.timely.fun/bm30tqng/event/78501143/20261115140000
+URL:https://events.timely.fun/bm30tqng/event/78501143/20261115140000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Fall Fun Sunday ⛸️🍁 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:89087a81b0b3@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261115T230000Z
 DTEND:20261116T020000Z
 SUMMARY:Live Music w/ Owen Barnhart & Maritza
@@ -157,7 +217,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:30eab91f423e@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261116T020000Z
 DTEND:20261116T050000Z
 SUMMARY:Taste & See Banqueet
@@ -171,14 +231,29 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:c198e8b5bb29@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261116T193000Z
+DTEND:20261116T213000Z
+SUMMARY:Monday at the Rink ⛸️ Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+LOCATION:Wenatchee
+DESCRIPTION:Monday at the Rink ⛸️ Public Skate There's always something fun happening at the rink\, even on a Monday! ⛸️🍂 November is a great time to head indoors\, lace up your skates\, and spend a little time doing something you love. Whether you're working on your balance\, skating a few laps with friends\, or…\nhttps://events.timely.fun/bm30tqng/event/78505882/20261116113000
+URL:https://events.timely.fun/bm30tqng/event/78505882/20261116113000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Monday at the Rink ⛸️ Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:8dfc591ffe25@wenatchee-activities
-DTSTAMP:20261113T172237Z
-DTSTART;VALUE=DATE:20261117
-DTEND;VALUE=DATE:20261118
+DTSTAMP:20261113T173953Z
+DTSTART:20261117T193000Z
+DTEND:20261117T213000Z
 SUMMARY:Tuesday Fall Skate ⛸️🍂 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
 LOCATION:1300 Walla Walla Ave\, Wenatchee\, WA 98801-1529\, United States\, Wenatchee
-DESCRIPTION:https://allevents.in/wenatchee/tuesday-fall-skate-public-skate-weinstein-beverage-community-rink-at-the-town-toyota-center/200030960128249
-URL:https://allevents.in/wenatchee/tuesday-fall-skate-public-skate-weinstein-beverage-community-rink-at-the-town-toyota-center/200030960128249
+DESCRIPTION:Tuesday Fall Skate ⛸️🍂 Public Skate Autumn is still in full swing\, and there's plenty of fun to be had on the ice! 🍁⛸️ Add something a little different to your Tuesday with an afternoon of skating at the rink. Whether you're enjoying some time to yourself\, meeting up with friends\, or bringing the…\nhttps://events.timely.fun/bm30tqng/event/78505902/20261117113000
+URL:https://events.timely.fun/bm30tqng/event/78505902/20261117113000
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Get tickets: Tuesday Fall Skate ⛸️🍂 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
@@ -186,8 +261,23 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:6d6c25b4d6bd@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261118T193000Z
+DTEND:20261118T213000Z
+SUMMARY:Wednesday Fun on Ice ⛸️ Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+LOCATION:Wenatchee
+DESCRIPTION:Wednesday Fun on Ice ⛸️ Public Skate A little skating can turn an ordinary Wednesday into something special! ⛸️🍂 Head to the rink for an afternoon of fun\, laughter\, and a chance to enjoy some time on the ice. Whether you're taking your first steps on skates\, practicing your turns\, or just cruising…\nhttps://events.timely.fun/bm30tqng/event/78505988/20261118113000
+URL:https://events.timely.fun/bm30tqng/event/78505988/20261118113000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Wednesday Fun on Ice ⛸️ Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:f3fe8fe26f75@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261119T030000Z
 DTEND:20261119T060000Z
 SUMMARY:Leavenworth’s Original Comedy Night at Bushel and Bee
@@ -202,7 +292,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f798a2e39b44@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261119T140000Z
 DTEND:20261120T043000Z
 SUMMARY:Girls’ Night Out @NCW Woodshop
@@ -217,12 +307,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:0e394d1c0b48@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261119T180000Z
 DTEND:20261119T220000Z
 SUMMARY:Winter Prep Workday: Mulching for Native Plants
-LOCATION:Red Barn at Wenatchee River Institute\, Leavenworth
-DESCRIPTION:Join us for a hands-on community workday as we prepare our Native Plant Garden for winter! Newly planted native species face tough competition from winter-growing grasses that thrive under the snow and stunt spring growth. By applying a heavy layer of mulch\, we can smother these invasive grasses\,…\nhttps://wenatcheeriverinstitute.org/event-calendar.html/event/2026/11/19/winter-prep-workday-mulching-for-native-plants/582052
+LOCATION:Red Barn at Wenatchee River Institute\, Wenatchee
+DESCRIPTION:Free Join us for a hands-on community workday as we prepare our Native Plant Garden for winter! Newly planted native species face tough competition from winter-growing grasses that thrive under the snow and stunt spring growth. By applying a heavy layer of mulch\, we can smother these invasive grasses\,…\nhttps://wenatcheeriverinstitute.org/event-calendar.html/event/2026/11/19/winter-prep-workday-mulching-for-native-plants/582052
 URL:https://wenatcheeriverinstitute.org/event-calendar.html/event/2026/11/19/winter-prep-workday-mulching-for-native-plants/582052
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -231,13 +321,28 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:52c7c632a8ed@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261119T193000Z
+DTEND:20261119T213000Z
+SUMMARY:Fall Fun Thursday ⛸️🍁 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+LOCATION:Wenatchee
+DESCRIPTION:Fall Fun Thursday ⛸️🍁 Public Skate Who says fall fun has to happen outdoors? 🍂⛸️ November is a great time to head inside and spend a little time on the ice! Whether you're looking for a fun activity with the kids\, catching up with friends\, or just wanting to get out and do something different\, our…\nhttps://events.timely.fun/bm30tqng/event/78506002/20261119113000
+URL:https://events.timely.fun/bm30tqng/event/78506002/20261119113000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Fall Fun Thursday ⛸️🍁 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:284744a6a27f@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Comedy! Lagers & Laughs: Travis Sherer & Cara Rosellini!
 LOCATION:Pinnacle Beerworks\, Wenatchee
-DESCRIPTION:$29 Our first show at Pinnacle Beerworks is an amazing lineup with two headliners: Travis Sherer and Cara Rosellini\nhttps://happeningnext.com/event/comedy-lagers-andamp-laughs-travis-sherer-andamp-cara-rosellini-eid1ef0l7x5fh9r
+DESCRIPTION:$29 Our first show at Pinnacle Beerworks is an amazing lineup with two headliners: Travis Sherer and Cara RoselliniAbout this EventCozy Comedy Co-Founder\, award-winning writer\, & hilarious local comedian T\nhttps://happeningnext.com/event/comedy-lagers-andamp-laughs-travis-sherer-andamp-cara-rosellini-eid1ef0l7x5fh9r
 URL:https://happeningnext.com/event/comedy-lagers-andamp-laughs-travis-sherer-andamp-cara-rosellini-eid1ef0l7x5fh9r
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -246,8 +351,23 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:f7b34ca13630@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261120T193000Z
+DTEND:20261120T213000Z
+SUMMARY:Friday Skate ⛸️ Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+LOCATION:Wenatchee
+DESCRIPTION:Friday Skate ⛸️ Public Skate Friday plans just got a little more fun! ⛸️🍂 There's nothing quite like spending some time on the ice\, whether you're making laps around the rink\, practicing a few new moves\, or simply sharing some laughs with friends. Take advantage of a November afternoon and turn an…\nhttps://events.timely.fun/bm30tqng/event/78506009/20261120113000
+URL:https://events.timely.fun/bm30tqng/event/78506009/20261120113000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Friday Skate ⛸️ Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:7a662514ec26@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261121T000000Z
 DTEND:20261121T030000Z
 SUMMARY:Live Music W/ Kevin Jones
@@ -262,7 +382,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f4a989b7b440@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261121T020000Z
 DTEND:20261121T040000Z
 SUMMARY:Jen Howard @ Union Hill Cider Co. Amphitheater
@@ -276,13 +396,43 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:cfa49ba4d508@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261121T020000Z
+DTEND:20261121T043000Z
+SUMMARY:Volunteer Patrol Warren Miller Film & Auction
+LOCATION:Wenatchee Convention Center\, Wenatchee
+DESCRIPTION:Warren Miller is back in Wenatchee! On Friday\, November 20\, the Mission Ridge Volunteer Patrol is hosting a screening of Days Off \, Warren Miller’s 77th film\, at the Wenatchee Convention Center. Doors open at 6pm with a silent auction\, and the film starts at 7pm. You’ll also have the chance to…\nhttps://www.missionridge.com/event/volunteer-patrol-warren-miller-film-auction/
+URL:https://www.missionridge.com/event/volunteer-patrol-warren-miller-film-auction/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Volunteer Patrol Warren Miller Film & Auction
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:0a622361177f@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261121T033000Z
+DTEND:20261121T050000Z
+SUMMARY:Lights Out Teen Skate 🌌⛸️ - Town Toyota Center's Weinstein Beverage Community Rink
+LOCATION:Wenatchee
+DESCRIPTION:Friday Skate ⛸️ Public Skate Friday plans just got a little more fun! ⛸️🍂 There's nothing quite like spending some time on the ice\, whether you're making laps around the rink\, practicing a few new moves\, or simply sharing some laughs with friends. Take advantage of a November afternoon and turn an…\nhttps://events.timely.fun/bm30tqng/event/78506013/20261120193000
+URL:https://events.timely.fun/bm30tqng/event/78506013/20261120193000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Lights Out Teen Skate 🌌⛸️ - Town Toyota Center's Weinstein Beverage Community Rink
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:75ce7939e7e6@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Laugh Riot 2026 with Andy Woodhull and Jody Carrol
 LOCATION:Wenatchee Convention Center\, Wenatchee
-DESCRIPTION:$31 BI Annual stand up comedy event in Wenatchee\, WA . 26 years strong!\nhttps://happeningnext.com/event/laugh-riot-2026-with-andy-woodhull-and-jody-carrol-eid1ef0kwckbuoa
+DESCRIPTION:$31 BI Annual stand up comedy event in Wenatchee\, WA . 26 years strong!About this Event https://cdn-az.allevents.in/events2/banners/3c6cc630-dd80-11f1-b5f0-afb87e29c9d2-rimg-w1200-h714-dc080808-gmir.jpg An\nhttps://happeningnext.com/event/laugh-riot-2026-with-andy-woodhull-and-jody-carrol-eid1ef0kwckbuoa
 URL:https://happeningnext.com/event/laugh-riot-2026-with-andy-woodhull-and-jody-carrol-eid1ef0kwckbuoa
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -292,7 +442,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:1b15e5e6cfda@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Saturday\, November 21st: Elvis Presley & Patsy Cline Tribute Show
@@ -306,8 +456,38 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:752b638d5a68@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261121T200000Z
+DTEND:20261121T213000Z
+SUMMARY:Fall Fun Saturday ⛸️🍁 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+LOCATION:Wenatchee
+DESCRIPTION:Fall Fun Saturday ⛸️🍁 Public Skate Looking for a little adventure this Saturday? 🍂⛸️ Leave the chilly November weather outside and head to the rink for an afternoon of skating and fun! It's a great chance to get the family together\, meet up with friends\, or try something new on the ice. From…\nhttps://events.timely.fun/bm30tqng/event/78507054/20261121120000
+URL:https://events.timely.fun/bm30tqng/event/78507054/20261121120000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Fall Fun Saturday ⛸️🍁 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:398b68639019@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261122T010000Z
+DTEND:20261122T023000Z
+SUMMARY:Saturday Skate ⛸️🍁 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+LOCATION:Wenatchee
+DESCRIPTION:Saturday Skate ⛸️🍁 Public Skate Saturday evening plans? How about a little fun on the ice! ⛸️🍂 As the November evenings get cooler\, there's no better place to spend some time with family and friends than at the rink. Lace up your skates\, share a few laughs\, and make some memories while enjoying an…\nhttps://events.timely.fun/bm30tqng/event/78507059/20261121170000
+URL:https://events.timely.fun/bm30tqng/event/78507059/20261121170000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Saturday Skate ⛸️🍁 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:5782e30cdd03@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261123
 SUMMARY:Sunday\, November 22nd: Elvis Presley & Loretta Lynn Tribute Show
@@ -322,7 +502,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9357644cf053@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261123T020000Z
 DTEND:20261123T040000Z
 SUMMARY:Michel @ Wenatchee Convention Center
@@ -336,14 +516,44 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:1d08945d52f3@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261123T193000Z
+DTEND:20261123T213000Z
+SUMMARY:Monday Skate ⛸️ Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+LOCATION:Wenatchee
+DESCRIPTION:Monday Skate ⛸️ Public Skate A little ice time is a great addition to your November plans! ⛸️🍂 With Thanksgiving just around the corner\, why not make some room for a fun outing at the rink? Whether you're catching up with friends\, spending time with family\, or simply looking for a way to stay…\nhttps://events.timely.fun/bm30tqng/event/78507079/20261123113000
+URL:https://events.timely.fun/bm30tqng/event/78507079/20261123113000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Monday Skate ⛸️ Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:968381653735@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261124T193000Z
+DTEND:20261124T213000Z
+SUMMARY:Autumn Ice Time ⛸️🍁 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+LOCATION:Wenatchee
+DESCRIPTION:Autumn Ice Time ⛸️🍁 Public Skate The leaves are falling\, Thanksgiving is getting closer\, and there's still plenty of fun to be had on the ice! 🍂⛸️ Add a little skating to your Tuesday plans and spend some time doing something different. Whether you're meeting up with friends\, bringing the family…\nhttps://events.timely.fun/bm30tqng/event/78507098/20261124113000
+URL:https://events.timely.fun/bm30tqng/event/78507098/20261124113000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Autumn Ice Time ⛸️🍁 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:990e13b29118@wenatchee-activities
-DTSTAMP:20261113T172237Z
-DTSTART;VALUE=DATE:20261125
-DTEND;VALUE=DATE:20261126
+DTSTAMP:20261113T173953Z
+DTSTART:20261125T193000Z
+DTEND:20261125T213000Z
 SUMMARY:Thanksgiving Eve Skate ⛸️ Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
 LOCATION:1300 Walla Walla Ave\, Wenatchee\, WA 98801-1529\, United States\, Wenatchee
-DESCRIPTION:Thanksgiving Eve Skate ⛸️🦃 Public Skate Before the turkey\, stuffing\, and Thanksgiving celebrations begin\, make a little time for some fun on the ice! 🍁⛸️ Whether you're welcoming family into town\, spending time with the kids while they're out of school\,\nhttps://allevents.in/wenatchee/thanksgiving-eve-skate-public-skate-weinstein-beverage-community-rink-at-the-town-toyota-center/200030965358604
-URL:https://allevents.in/wenatchee/thanksgiving-eve-skate-public-skate-weinstein-beverage-community-rink-at-the-town-toyota-center/200030965358604
+DESCRIPTION:Thanksgiving Eve Skate ⛸️🦃 Public Skate Before the turkey\, stuffing\, and Thanksgiving celebrations begin\, make a little time for some fun on the ice! 🍁⛸️ Whether you're welcoming family into town\, spending time with the kids while they're out of school\, or looking for something fun to do before the…\nhttps://events.timely.fun/bm30tqng/event/78507102/20261125113000
+URL:https://events.timely.fun/bm30tqng/event/78507102/20261125113000
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Get tickets: Thanksgiving Eve Skate ⛸️ Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
@@ -351,8 +561,23 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:3db435bfd2b6@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20261125T213000Z
+DTEND:20261125T230000Z
+SUMMARY:Gobble & Skate ⛸️🦃 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+LOCATION:Wenatchee
+DESCRIPTION:Gobble & Skate ⛸️🦃 Public Skate Gobble\, gobble! 🦃🍁 Thanksgiving is almost here\, but there's still time to squeeze in some skating before the big feast! Gather the family\, bring along visiting relatives\, or invite a few friends for an afternoon of fun on the ice. Whether you're practicing your…\nhttps://events.timely.fun/bm30tqng/event/78507107/20261125133000
+URL:https://events.timely.fun/bm30tqng/event/78507107/20261125133000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Gobble & Skate ⛸️🦃 Public Skate @ Weinstein Beverage Community Rink at the Town Toyota Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:feb50ad53864@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261126T170000Z
 DTEND:20261126T190000Z
 SUMMARY:Fowl Play 5k Turkey Trot!
@@ -367,7 +592,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:170aeb24326b@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20270308
 SUMMARY:Wenatchee Wild vs. Kelowna Rockets
@@ -382,7 +607,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2546eecce734@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261128T000000Z
 DTEND:20261128T030000Z
 SUMMARY:Live Music w/ Seth Garrido
@@ -397,7 +622,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:7446986ac495@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Wenatchee Wild vs. Penticton Vees
@@ -412,11 +637,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:54f1760ecffc@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261128T210000Z
-DTEND:20261128T230000Z
+DTEND:20261128T210000Z
 SUMMARY:Rachael Lundin Book Signing
-LOCATION:A Book for All Seasons\, Leavenworth
+LOCATION:A Book for All Seasons\, Wenatchee
 DESCRIPTION:Rachael Lundin signs\, Music of the Mermaids\, a middle school story of thirteen-year-old Dakota Geske who has until sunrise to return a kidnapped merchild and stop a war between two worlds.\nhttps://abookforallseasons.com/event/2026-11-28/music-mermaids-book-signing
 URL:https://abookforallseasons.com/event/2026-11-28/music-mermaids-book-signing
 BEGIN:VALARM
@@ -427,7 +652,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:8823ca24a274@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261129T230000Z
 DTEND:20261130T020000Z
 SUMMARY:Live Music w/ Chris Anderson
@@ -442,7 +667,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f97b3076b4eb@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261202T010000Z
 DTEND:20261202T023000Z
 SUMMARY:Poetry Reading
@@ -457,12 +682,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:eb0d8974d4fa@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261204T030000Z
-DTEND:20261204T053000Z
+DTEND:20261204T060000Z
 SUMMARY:Singer Songwriter Storyteller: December
-LOCATION:Snowy Owl Theater at Icicle Creek Center for the Arts\, Leavenworth
-DESCRIPTION:First Thursday of the month concert! Eric Link\, Beth Whitney\, Erin McNamee. Acoustic instruments\, honest vocals\, and songs that stay with you long after the last note – all inside Leavenworth’s Snowy Owl Theater\, a world-class listening room that feels just like home. $25 General Admission $15…\nhttps://icicle.my.salesforce-sites.com/ticket/#/instances/a0FPH00000EwA2c2AF
+LOCATION:Snowy Owl Theater at Icicle Creek Center for the Arts\, Wenatchee
+DESCRIPTION:Singer\, Songwriter\, Storyteller Eric Link\, Beth Whitney\, Erin McNamee Find more info at: https://icicle.my.salesforce-sites.com/ticket/#/instances/a0FPH00000EwA2c2AF\nhttps://icicle.my.salesforce-sites.com/ticket/#/instances/a0FPH00000EwA2c2AF
 URL:https://icicle.my.salesforce-sites.com/ticket/#/instances/a0FPH00000EwA2c2AF
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -472,12 +697,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9477175562bc@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:Little Black Dress Party
 LOCATION:Wenatchee Convention Center\, North Wenatchee Avenue\, Wenatchee\, WA\, USA\, Wenatchee
-DESCRIPTION:$49.87 Grab your friends\, that little black dress\, your favorite party shoes\, and dance the night away at the premier ladies event of the season!\nhttps://allevents.in/wenatchee/little-black-dress-party/100002002660704076
+DESCRIPTION:$49.87 \nhttps://allevents.in/wenatchee/little-black-dress-party/100002002660704076
 URL:https://allevents.in/wenatchee/little-black-dress-party/100002002660704076
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -486,29 +711,14 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:25ca6d72a6b1@wenatchee-activities
-DTSTAMP:20261113T172237Z
-DTSTART;VALUE=DATE:20261205
-DTEND;VALUE=DATE:20261206
-SUMMARY:Christmas at No-Limits *READ DESCRIPTION*
-LOCATION:150 S 48th St\, Quincy\, IL\, United States\, Illinois 62305\, Quincy
-DESCRIPTION:For this event and ALL OTHERS\, from now on\, EVERYONE MUST RSVP‼️‼️ This event has a ticket link\, where volunteers and guests can RSVP! December 5th\, 4:00-7:00 PM The Crossing - 48th St. (150 S 48th St.\, Quincy\, IL 62305) NO COST\, please RSVP Theme: Christ\nhttps://allevents.in/quincy/christmas-at-no-limits-read-description/200030991412524
-URL:https://allevents.in/quincy/christmas-at-no-limits-read-description/200030991412524
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Get tickets: Christmas at No-Limits *READ DESCRIPTION*
-TRIGGER:-P21D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:9b23e03aca0d@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:The Fab Lads Now & Then: a Complete Beatles Experience Concert
 LOCATION:One: Special Event Venue\, Quincy
-DESCRIPTION:$33.77 \nhttps://allevents.in/quincy/the-fab-lads-now-and-then-a-complete-beatles-experience-concert/100001995174558814
-URL:https://allevents.in/quincy/the-fab-lads-now-and-then-a-complete-beatles-experience-concert/100001995174558814
+DESCRIPTION:$34 \nhttps://happeningnext.com/event/the-fab-lads-now-andamp-then-a-complete-beatles-experience-concert-eid1ef0l3a6qrsa
+URL:https://happeningnext.com/event/the-fab-lads-now-andamp-then-a-complete-beatles-experience-concert-eid1ef0l3a6qrsa
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Get tickets: The Fab Lads Now & Then: a Complete Beatles Experience Concert
@@ -517,7 +727,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:b2a8d890a217@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261205T170000Z
 DTEND:20261205T213000Z
 SUMMARY:The Met Opera: Samson et Dalila – Saint-Saëns
@@ -532,7 +742,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:62a6b6053483@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261205T210000Z
 DTEND:20261205T230000Z
 SUMMARY:Book Signing @ A Book for All Seasons
@@ -547,11 +757,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d603a4621217@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261206T030000Z
 DTEND:20261206T060000Z
 SUMMARY:A John Prine Christmas with the Jenner Fox Band
-LOCATION:Snowy Owl Theater at Icicle Creek Center for the Arts\, Leavenworth
+LOCATION:Snowy Owl Theater at Icicle Creek Center for the Arts\, Wenatchee
 DESCRIPTION:A John Prine Christmas Ever wonder what John Prine has to do with Christmas? Ever wished the beloved songwriter had more to do with sleigh bells\, eggnog\, and Old Saint Nick. Well\, in 1994 Prine released his 11th LP titled\, “A John Prine Christmas.” The critics didn’t acclaim it much\, but with…\nhttps://icicle.my.salesforce-sites.com/ticket/#/instances/a0FPH00000F6vfh2AB
 URL:https://icicle.my.salesforce-sites.com/ticket/#/instances/a0FPH00000F6vfh2AB
 BEGIN:VALARM
@@ -562,7 +772,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2e6098fc5aba@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261206T030000Z
 DTEND:20261206T043000Z
 SUMMARY:Merry Christmas from Leavenworth Concert
@@ -577,7 +787,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c1c53ca6663e@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261206T033000Z
 DTEND:20261206T053000Z
 SUMMARY:Storm Large @ Numerica Performing Arts Center
@@ -592,7 +802,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f3ff2dbe43ff@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261206T230000Z
 DTEND:20261207T010000Z
 SUMMARY:A Special Visit from Italy: Meet Emanuele Fontanini
@@ -607,7 +817,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:800c7e3a0a5b@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261206T230000Z
 DTEND:20261207T010000Z
 SUMMARY:Meet Emanuele Fontanini at Kris Kringl
@@ -622,22 +832,22 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:0d7f3d8cdab8@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261209T030000Z
 DTEND:20261209T040000Z
-SUMMARY:Red Barn Event: “The Icicle Calls Us Back” Film Showing
+SUMMARY:Red Barn Event: 'The Icicle Calls Us Back' Film Showing
 LOCATION:Red Barn at Wenatchee River Institute\, Leavenworth
-DESCRIPTION:This film asks three generations of p’squosa descendants what nsíq̓əlt means to them\, and to imagine the future they wish to see for their homelands. In an era of climate change and uncertainty\, one thing that is certain is that the Icicle’s original stewards know how best to care for this land\,…\nhttps://wenatcheeriverinstitute.org/event-calendar.html/event/2026/12/08/red-barn-event-the-icicle-calls-us-back-film-showing/579659
+DESCRIPTION:Free The Icicle Calls Us Back Film Showing with Claire Seaman This event and film will be livestreamed during the event\, but will NOT be available to watch later. Livestream the event on YouTube at this link. No registration required\, but RSVP to receive email reminders and updates about this event!…\nhttps://wenatcheeriverinstitute.org/event-calendar.html/event/2026/12/08/red-barn-event-the-icicle-calls-us-back-film-showing/579659
 URL:https://wenatcheeriverinstitute.org/event-calendar.html/event/2026/12/08/red-barn-event-the-icicle-calls-us-back-film-showing/579659
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Get tickets: Red Barn Event: “The Icicle Calls Us Back” Film Showing
+DESCRIPTION:Get tickets: Red Barn Event: 'The Icicle Calls Us Back' Film Showing
 TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ba75385d7e79@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261211T030000Z
 DTEND:20261211T060000Z
 SUMMARY:Vince Guaraldi’s A Charlie Brown Christmas: Jose Gonzales Trio
@@ -652,7 +862,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:348aaa962767@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20270118
 SUMMARY:Wenatchee Wild vs. Seattle Thunderbirds
@@ -667,7 +877,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:6c00793ad2dd@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261212T030000Z
 DTEND:20261212T060000Z
 SUMMARY:Vince Guaraldi’s A Charlie Brown Christmas: Jose Gonzales Trio
@@ -682,7 +892,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c5f8c8233e57@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:VECA Holiday Party 2026 - Wenatchee
@@ -697,9 +907,9 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:08cb41fc8a03@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261212T220000Z
-DTEND:20261213T000000Z
+DTEND:20261213T003000Z
 SUMMARY:Leavenworth Village Voices: Christmas in the Mountains Matinee
 LOCATION:Canyon Wren Recital Hall\, Leavenworth
 DESCRIPTION:Usher in the joy and peace of the Christmas season with Leavenworth’s own community choir for a magical winter concert at the Canyon Wren Recital Hall! Now in its 44th year of spreading Christmas joy\, the Leavenworth Village Voices presents this heartwarming and festive concert showcasing a rich…\nhttps://icicle.my.salesforce-sites.com/ticket/#/instances/a0FPH00000FKFjp2AH
@@ -712,7 +922,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d60c130533a5@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261213T040000Z
 DTEND:20261213T053000Z
 SUMMARY:THE JEWEL TONES Motown Christmas Concert
@@ -727,7 +937,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9a9f755b4df1@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261215
 DTEND;VALUE=DATE:20261216
 SUMMARY:Calgary Hitmen at Wenatchee Wild at Town Toyota Center
@@ -742,7 +952,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f2c5622504f3@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261218T020000Z
 DTEND:20261218T043000Z
 SUMMARY:Girls Night Out at NCW Woodshop @NCW Woodshop
@@ -757,12 +967,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:27117a093923@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:Dance To Glorify- The Nutcracker
 LOCATION:Wenatchee High School\, Wenatchee
-DESCRIPTION:$12.51 Dance To Glorify presents “The Nutcracker”. Saturday December 19th at 12:30 and 5:30pm. Location is at Wenatchee High School.\nhttps://allevents.in/wenatchee/dance-to-glorify-the-nutcracker/100002003845804744
+DESCRIPTION:$12.51 \nhttps://allevents.in/wenatchee/dance-to-glorify-the-nutcracker/100002003845804744
 URL:https://allevents.in/wenatchee/dance-to-glorify-the-nutcracker/100002003845804744
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -772,7 +982,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:09375c706c7b@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261220
 DTEND;VALUE=DATE:20261221
 SUMMARY:GEOFFREY CASTLE’S CELTIC CHRISTMAS ~ 20TH ANNIVERSARY TOUR
@@ -787,11 +997,11 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:417f1539058a@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261220T230000Z
 DTEND:20261221T013000Z
 SUMMARY:WVSO + Columbia Chorale | Heaven & Nature Sing
-LOCATION:Snowy Owl Theater at Icicle Creek Center for the Arts\, Leavenworth
+LOCATION:Snowy Owl Theater at Icicle Creek Center for the Arts\, Wenatchee
 DESCRIPTION:When the orchestra and chorus meet at Christmas\, the hall itself seems to join the score. Heaven and Nature Sing brings the Wenatchee Valley Symphony Orchestra and Columbia Chorale together for an evening of carols\, concert showpieces\, and the kind of communal singing that turns an audience into…\nhttps://icicle.my.salesforce-sites.com/ticket/#/instances/a0FPH00000FErAH2A1
 URL:https://icicle.my.salesforce-sites.com/ticket/#/instances/a0FPH00000FErAH2A1
 BEGIN:VALARM
@@ -802,7 +1012,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:4a315f8185da@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261221T010000Z
 DTEND:20261221T023000Z
 SUMMARY:Christmas Spectactular with Manuela Horn and her Slay-belles!
@@ -817,7 +1027,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d4e4ffd918ad@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261223T010000Z
 DTEND:20261223T023000Z
 SUMMARY:Christmas Spectactular with Manuela Horn and her Slay-belles!
@@ -832,12 +1042,12 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:8fd986fb5dbd@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261223
 DTEND;VALUE=DATE:20261224
 SUMMARY:Holiday Cookie Decorating @ The Cove
 LOCATION:The Cove Wine & Games\, Chelan
-DESCRIPTION:$23 Join us at The Cove for another holiday cookie decorating night!\nhttps://happeningnext.com/event/holiday-cookie-decorating-the-cove-eid1ef0l8m2k54r
+DESCRIPTION:$23 Join us at The Cove for another holiday cookie decorating night!About this EventJoin us at The Cove on Wednesday\, December 23rd from 5 - 7 PM for a Holiday Cookie Decorating Night!\nhttps://happeningnext.com/event/holiday-cookie-decorating-the-cove-eid1ef0l8m2k54r
 URL:https://happeningnext.com/event/holiday-cookie-decorating-the-cove-eid1ef0l8m2k54r
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -847,7 +1057,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bdcdb460ca97@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20261224T210000Z
 DTEND:20261224T230000Z
 SUMMARY:Photos with Santa Downtown
@@ -862,7 +1072,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:68857913c80b@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270328
 SUMMARY:Everett Silvertips at Wenatchee Wild at Town Toyota Center
@@ -876,8 +1086,23 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:5d7e8ee566ac@wenatchee-activities
+DTSTAMP:20261113T173953Z
+DTSTART:20270101T030000Z
+DTEND:20270101T050000Z
+SUMMARY:New Year's Eve Dance feat. Wenatchee Big Band
+LOCATION:Wenatchee
+DESCRIPTION:Celebrate the New Year with the Wenatchee Big Band! We appreciate you bringing a non-refrigerated snack to share. All of our dances feature great music by local bands. Dancing is optional — you are welcome to come to enjoy the music and socialize. Tickets are $20 and available at the door the day…\nhttps://events.timely.fun/bm30tqng/event/78512731/20261231190000
+URL:https://events.timely.fun/bm30tqng/event/78512731/20261231190000
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: New Year's Eve Dance feat. Wenatchee Big Band
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:5d9d08bf8f98@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270201
 SUMMARY:Village of Lights: Winter Karneval
@@ -892,7 +1117,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9911d4a138ee@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20270106
 DTEND;VALUE=DATE:20270107
 SUMMARY:Edmonton Oil Kings at Wenatchee Wild at Town Toyota Center
@@ -907,7 +1132,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c7b6f3215460@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270108T030000Z
 DTEND:20270108T050000Z
 SUMMARY:Singer Songwriter Storyteller: January
@@ -922,7 +1147,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:6cb80a08448b@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20270116
 DTEND;VALUE=DATE:20270117
 SUMMARY:Dancing with the Wenatchee Stars
@@ -937,7 +1162,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:455c4c8010e4@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20270122
 DTEND;VALUE=DATE:20270123
 SUMMARY:Joel Gibson Jr. @ Lake Chelan Winterfest - Full Band
@@ -952,7 +1177,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:442db838c603@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270123T180000Z
 DTEND:20270123T220000Z
 SUMMARY:The Met Opera: La Fanciulla del West – Puccini
@@ -967,7 +1192,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:28b377f40d56@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
 SUMMARY:Patrick Warburton
@@ -982,7 +1207,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:64ab8ca8214f@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270205T030000Z
 DTEND:20270205T053000Z
 SUMMARY:Singer Songwriter Storyteller: February
@@ -997,7 +1222,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:7ea0c279c352@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270214T030000Z
 DTEND:20270214T053000Z
 SUMMARY:Seraph Brass @ ICCA
@@ -1012,7 +1237,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c161dae55c8d@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20270217
 DTEND;VALUE=DATE:20270218
 SUMMARY:Mardi Gras Mambo at Numerica Performing Arts Center
@@ -1027,7 +1252,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d963f63c51ae@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20270220
 DTEND;VALUE=DATE:20270221
 SUMMARY:Hell's Belles - Tribute to AC/DC
@@ -1041,23 +1266,8 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:3d95d78852ad@wenatchee-activities
-DTSTAMP:20261113T172237Z
-DTSTART;VALUE=DATE:20270227
-DTEND;VALUE=DATE:20270228
-SUMMARY:WENATCHEE VALLEY QUINCEAÑERA EXPO 2027
-LOCATION:Wenatchee Convention center\, Wenatchee
-DESCRIPTION:Find everything for your dream quinceañera! Meet local vendors\, enjoy giveaways\, enter our grand prize drawing\, and celebrate community!\nhttps://www.eventbrite.com/e/wenatchee-valley-quinceanera-expo-2027-tickets-2004110091232
-URL:https://www.eventbrite.com/e/wenatchee-valley-quinceanera-expo-2027-tickets-2004110091232
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Get tickets: WENATCHEE VALLEY QUINCEAÑERA EXPO 2027
-TRIGGER:-P21D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:c5f5cdcfa986@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270305T030000Z
 DTEND:20270305T053000Z
 SUMMARY:Singer Songwriter Storyteller: March
@@ -1072,7 +1282,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:262049ffb86e@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270307T033000Z
 DTEND:20270307T053000Z
 SUMMARY:Dylan Scott @ Town Toyota Center
@@ -1087,7 +1297,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:964348c3e4a2@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270313T030000Z
 DTEND:20270313T050000Z
 SUMMARY:Sleeping Lady Foundation’s Speaker Series: Tim Egan
@@ -1102,7 +1312,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d71b0bbb5f08@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20270319
 DTEND;VALUE=DATE:20270320
 SUMMARY:Wenatchee Wild vs. Portland Winterhawks
@@ -1117,7 +1327,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:4ccde93f4fe0@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270402T020000Z
 DTEND:20270402T043000Z
 SUMMARY:Singer Songwriter Storyteller: April
@@ -1132,7 +1342,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bef7ed5b406b@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270403T160000Z
 DTEND:20270403T210000Z
 SUMMARY:The Met Opera: Manon – Massenet
@@ -1147,7 +1357,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:717395f02739@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270409T020000Z
 DTEND:20270409T043000Z
 SUMMARY:Sleeping Lady Foundation’s Speaker Series: Danielle Feinberg
@@ -1162,7 +1372,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:cabd19d9be7a@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270427T170000Z
 DTEND:20270427T210000Z
 SUMMARY:The Met Opera: Otello – Verdi
@@ -1177,7 +1387,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f3df7304138f@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270507T020000Z
 DTEND:20270507T043000Z
 SUMMARY:Singer Songwriter Storyteller: May
@@ -1192,7 +1402,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:7828dabb4752@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20270508
 DTEND;VALUE=DATE:20270509
 SUMMARY:Traditional Maifest Celebration
@@ -1207,7 +1417,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:b9b3094ed53d@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20270509
 DTEND;VALUE=DATE:20270510
 SUMMARY:Traditional Maifest Celebration
@@ -1222,7 +1432,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ad0f14402154@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270514T020000Z
 DTEND:20270514T043000Z
 SUMMARY:Sleeping Lady Foundation’s Speaker Series: Anna Lappé
@@ -1237,7 +1447,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:a8ce77f77120@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART;VALUE=DATE:20270522
 DTEND;VALUE=DATE:20270523
 SUMMARY:Card Mania #03: Arena Show
@@ -1252,7 +1462,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f1312d64651c@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270604T020000Z
 DTEND:20270604T043000Z
 SUMMARY:Singer Songwriter Storyteller: June
@@ -1267,7 +1477,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ca5390513097@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270605T160000Z
 DTEND:20270605T220000Z
 SUMMARY:The Met Opera: Parsifal – Wagner
@@ -1282,7 +1492,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:0209e9686dd1@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270625T220000Z
 DTEND:20270626T000000Z
 SUMMARY:Beyond Wonderland At The Gorge 2027 @ Gorge Amphitheatre
@@ -1297,7 +1507,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:01a4adfb2daa@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270625T220000Z
 DTEND:20270626T000000Z
 SUMMARY:Beyond Wonderland Festival 2027 @ Gorge Amphitheatre
@@ -1312,7 +1522,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:481a357277a3@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270626T190000Z
 DTEND:20270626T210000Z
 SUMMARY:Beyond Wonderland PNW 2027 @ Gorge Amphitheatre
@@ -1327,7 +1537,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:5034e4abbda9@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270627T190000Z
 DTEND:20270627T210000Z
 SUMMARY:Beyond Wonderland At The Gorge 2027 @ Gorge Amphitheatre
@@ -1342,7 +1552,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:95a59ff78dff@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270703T010000Z
 DTEND:20270703T030000Z
 SUMMARY:Zach Top @ Gorge Amphitheatre
@@ -1357,7 +1567,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:7657b55bf1fd@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270822T030000Z
 DTEND:20270822T050000Z
 SUMMARY:King Gizzard & The Lizard Wizard @ The Gorge Amphitheatre
@@ -1372,7 +1582,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bcaaf8379ae6@wenatchee-activities
-DTSTAMP:20261113T172237Z
+DTSTAMP:20261113T173953Z
 DTSTART:20270903T030000Z
 DTEND:20270903T050000Z
 SUMMARY:Legacy: A Pink Floyd Show @ Town Toyota Center

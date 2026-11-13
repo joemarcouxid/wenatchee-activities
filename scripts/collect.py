@@ -93,7 +93,8 @@ def categorize(e):
     big_venue = any(v in t for v in BIG_VENUES)
     showy = any(c in e["cats"] for c in ("music", "arts", "festivals", "sports"))
     e["ticketed"] = ticketed and not e["free"]
-    e["big"] = bool(big_venue or (not e["free"] and (e.get("_concerts") or (e["ticketed"] and showy))))
+    lesson = re.search(r"\b(class|classes|workshop|lesson|camp|yoga|make a|make your own|date night|clinic|meeting|bingo|trivia|happy hour|open mic|demo)", e["title"].lower())
+    e["big"] = bool(not lesson and (big_venue or (not e["free"] and (e.get("_concerts") or (e["ticketed"] and showy)))))
 
 
 # ---------------------------------------------------------------- fetching
@@ -490,6 +491,21 @@ def main():
     all_events += tips
 
     events = merge(all_events)
+    # Recurring series (classes, weekly bingo, daily demos, a hockey season): not "plan ahead" material,
+    # and keep only the next 40 dates so one series can't flood the list.
+    events.sort(key=lambda e: e["start"])
+    series = {}
+    for e in events:
+        k = norm_title(re.split(r"\s@\s|\bat\b", e["title"])[0]) + "|" + (e["town"] or "")
+        series.setdefault(k, []).append(e)
+    keep = []
+    for k, lst in series.items():
+        if len(lst) > 3:
+            for e in lst:
+                e["big"] = False
+                e["repeats"] = len(lst)
+        keep += lst[:40]
+    events = keep
     stamp = NOW.isoformat()
     first_run = not prev
     new_big = []

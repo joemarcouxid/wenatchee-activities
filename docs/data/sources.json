@@ -234,7 +234,8 @@
     ]
    ],
    "aggregator": true,
-   "exclude": "not public|parada privada|bookmobile"
+   "exclude": "not public|parada privada|bookmobile",
+   "bigTitles": "a^"
   },
   {
    "id": "wri",

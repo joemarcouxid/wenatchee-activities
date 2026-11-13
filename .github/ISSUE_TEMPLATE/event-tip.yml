@@ -1,0 +1,49 @@
+name: "📣 Submit an event tip"
+description: Saw a food truck post, flyer, or Facebook event? Add it to the app.
+title: "[Tip] "
+body:
+  - type: input
+    attributes:
+      label: What's happening?
+      placeholder: "e.g. Mama Tina's Wood Fired Pizza truck at Union Hill Cider"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Date
+      placeholder: "2026-11-21  or  11/21/2026"
+    validations:
+      required: true
+  - type: input
+    attributes:
+      label: Start time
+      placeholder: "5:00 PM (leave blank for all day)"
+  - type: input
+    attributes:
+      label: End time
+      placeholder: "8:00 PM"
+  - type: input
+    attributes:
+      label: Where (venue or address)
+      placeholder: "Union Hill Cider, 2720 Methow St"
+  - type: dropdown
+    attributes:
+      label: Town
+      options: [Wenatchee, East Wenatchee, Cashmere, Leavenworth, Entiat, Chelan, Quincy]
+    validations:
+      required: true
+  - type: dropdown
+    attributes:
+      label: Kind of event
+      options: [Food truck, Music, Family, Outdoors, Arts, Market, Festival, Sports, Other]
+  - type: input
+    attributes:
+      label: Cost
+      placeholder: "Free, $15, etc."
+  - type: input
+    attributes:
+      label: Link
+      placeholder: "Facebook post, flyer, or website"
+  - type: textarea
+    attributes:
+      label: Details

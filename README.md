@@ -1,56 +1,39 @@
-# Something to do — Phone App Deployment
+# ⛰️ Valley Happenings: wenatchee-activities
 
-This folder is a Progressive Web App (PWA). It can be installed on iPhone,
-iPad, Android, Windows, and macOS after the folder is hosted on an HTTPS website.
+One place to see what's going on in the Wenatchee Valley: **Wenatchee, East Wenatchee, Cashmere, Leavenworth, Entiat, Chelan/Manson and Quincy/George (the Gorge)**.
 
-## Fastest deployment with GitHub Pages
+**Live site:** https://joemarcouxid.github.io/wenatchee-activities/
 
-1. Create or sign in to a GitHub account.
-2. Create a new repository named `wenatchee-teen-activities`.
-3. Upload every item from this folder, including:
-   - index.html
-   - manifest.webmanifest
-   - service-worker.js
-   - .nojekyll
-   - the icons folder
-4. Open the repository's Settings.
-5. Select Pages.
-6. Under Build and deployment, choose:
-   - Source: Deploy from a branch
-   - Branch: main
-   - Folder: /(root)
-7. Save.
-8. GitHub will provide a public HTTPS address after deployment.
+## What it does
+- **Today · This Weekend · Next 7 Days · This Month · This Year** tabs, with a count on each
+- **🎟 Plan Ahead**: concerts, shows and big ticketed events a week or more out, with **🆕 newly announced** flags so you can get tickets early
+- **⭐ My List**: tap ☆ on anything to save it on your phone
+- Filter by town and by kind (Food & Drink, Music, Family, Outdoors, Races & Sports, Arts & Shows, Markets, Festivals, Community), or search ("food truck", "trivia", "kids")
+- **🔄 Refresh** loads the latest scan; **Scan now** runs a fresh scan on GitHub
+- **📅 Add** puts any event in your phone calendar (big events get reminders 2 weeks and 1 day before)
+- **＋ Add a tip** for food truck posts, flyers and Facebook events the scanner can't see
 
-## Install on iPhone or iPad
+## Heads-up for tickets (pick one or both)
+1. **Phone calendar:** on the Plan Ahead tab, tap **Subscribe on this phone**. Concerts and big events show up in your calendar automatically, with a reminder 3 weeks out. Feed: `webcal://joemarcouxid.github.io/wenatchee-activities/data/plan-ahead.ics`
+2. **Email / GitHub app alert:** when a scan finds a newly announced concert or big event, it opens an issue titled "🎟 New events announced". Make sure you're **Watching** this repo (Watch → All Activity, or Custom → Issues) and GitHub will email you or push to the GitHub mobile app.
 
-1. Open the deployed address in Safari.
-2. Tap the Share button.
-3. Tap Add to Home Screen.
-4. Confirm the app name and tap Add.
+## How it works
+```
+every 3 hours ─► GitHub Actions runs scripts/collect.py
+                   ├─ reads ~20 public calendars listed in data/sources.json
+                   ├─ removes duplicates, tags each event by town and kind
+                   ├─ writes data/events.json and data/plan-ahead.ics
+                   └─ opens an alert issue for newly announced big events
+GitHub Pages ─► index.html shows data/events.json
+```
+Sources include the Leavenworth, Lake Chelan, Wenatchee Valley, Cashmere, Entiat and Quincy chambers; Visit Wenatchee; Wenatchee Outdoors; WSU Extension; Numerica PAC; Town Toyota Center; WVC; Pybus Market; NCW Libraries; Wenatchee River Institute; Icicle Creek Center for the Arts; plus Eventbrite, Songkick (including the Gorge) and Bandsintown, filtered to this area.
 
-## Install on Android
+The **Sources & status** link at the bottom of the site shows which sources are working and how many events each one found. Some sites block automated readers or change their layout. To add or fix one, edit `data/sources.json` (the `_help` line at the top explains the format).
 
-1. Open the deployed address in Chrome.
-2. Tap Install when prompted.
-3. If the prompt does not appear, open Chrome's menu and choose
-   Install app or Add to Home screen.
+## Food trucks and small stuff
+Most food trucks only post on Facebook or Instagram, which can't be read automatically. The app catches the ones that show up on brewery, cidery, chamber and Eventbrite calendars. For everything else, tap **＋ Add a tip**. It opens a short form; when you submit it, the event shows up on the site in a minute or two. Only tips from you or collaborators you add are published.
 
-## Updating the app
-
-Replace the changed files in the same GitHub repository. Visitors receive the
-new version after the service worker updates. When changing major app files,
-increase the cache name in service-worker.js from v1 to v2, v3, and so forth.
-
-## Important
-
-The main generator works offline after it has been opened once. External source
-links still require internet access. Confirm current trail closures, permits,
-weather, smoke, snow, venue hours, and water conditions before leaving.
-
-## App-store publication
-
-This same web app can later be packaged with Capacitor for Apple App Store and
-Google Play distribution. Store submission requires developer accounts, native
-build tools, screenshots, listing information, review, and usually a privacy
-policy.
+## One-time setup
+1. **Settings → Pages →** Source: *Deploy from a branch*, Branch: `main` / `(root)` → Save.
+2. **Actions → "Scan for events" → Run workflow** to do the first scan right away. After that it runs on its own every 3 hours.
+3. **Watch** the repo (top right) so new-event alerts reach you.

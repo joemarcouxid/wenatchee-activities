@@ -1,0 +1,43 @@
+name: Scan for events
+
+on:
+  schedule:
+    - cron: "17 */3 * * *"   # every 3 hours
+  workflow_dispatch: {}       # "Run workflow" button = scan now
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: data
+  cancel-in-progress: false
+
+jobs:
+  collect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Collect events
+        run: python scripts/collect.py
+      - name: Save results
+        run: |
+          git config user.name "events-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/events.json data/plan-ahead.ics
+          if git diff --cached --quiet; then echo "No changes"; exit 0; fi
+          git commit -m "Update events $(TZ=America/Los_Angeles date '+%b %-d %-I:%M %p')"
+          git pull --rebase -X theirs origin main || true
+          git push
+      - name: Heads-up for newly announced concerts and big events
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          body="$(python scripts/alert.py)"
+          if [ -n "$body" ]; then
+            gh issue create --title "🎟 New events announced – $(TZ=America/Los_Angeles date '+%b %-d')" --body "$body"
+          fi

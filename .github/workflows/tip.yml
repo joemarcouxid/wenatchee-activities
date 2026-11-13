@@ -1,0 +1,49 @@
+name: Add event tip
+
+on:
+  issues:
+    types: [opened]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: data
+  cancel-in-progress: false
+
+jobs:
+  add:
+    # Only tips from you (or people you add as collaborators) are published
+    if: startsWith(github.event.issue.title, '[Tip]') && contains(fromJSON('["OWNER","MEMBER","COLLABORATOR"]'), github.event.issue.author_association)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Add tip
+        id: tip
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+          ISSUE_URL: ${{ github.event.issue.html_url }}
+        run: python scripts/add_tip.py
+      - name: Rebuild events
+        run: python scripts/collect.py
+      - name: Save
+        run: |
+          git config user.name "events-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "Add tip: ${{ github.event.issue.number }}" || exit 0
+          git pull --rebase -X theirs origin main || true
+          git push
+      - name: Close issue
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue close ${{ github.event.issue.number }} --comment "✅ Added. It will show on the site within a minute or two."
+      - name: Report problem
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh issue comment ${{ github.event.issue.number }} --body "⚠️ Couldn't read this tip. Check that the date looks like 2026-11-21 or 11/21/2026, then edit the issue or open a new one."

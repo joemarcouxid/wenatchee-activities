@@ -19,7 +19,7 @@ One place to see what's going on in the Wenatchee Valley: **Wenatchee, East Wena
 
 ## How it works
 ```
-every 3 hours ─► GitHub Actions runs scripts/collect.py
+once a day ─► GitHub Actions runs scripts/collect.py
                    ├─ reads ~20 public calendars listed in docs/data/sources.json
                    ├─ removes duplicates, tags each event by town and kind
                    ├─ writes docs/data/events.json and plan-ahead.ics
@@ -35,5 +35,5 @@ Most food trucks only post on Facebook or Instagram, which can't be read automat
 
 ## One-time setup
 1. **Settings → Pages →** Source: *Deploy from a branch*, Branch: `main` / `/docs` (already set) → Save.
-2. **Actions → "Scan for events" → Run workflow** to do the first scan right away. After that it runs on its own every 3 hours.
+2. **Actions → "Scan for events" → Run workflow** to do the first scan right away. After that it runs on its own once a day, early in the morning.
 3. **Watch** the repo (top right) so new-event alerts reach you.

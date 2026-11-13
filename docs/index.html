@@ -124,7 +124,7 @@
 <footer>
   <div id="foot"></div>
   <p><button id="showSources">Sources &amp; status</button> · <a id="scanNow" target="_blank" rel="noopener">Scan now on GitHub</a> · <a id="subscribe">📅 Subscribe to Plan Ahead</a></p>
-  <p style="font-size:12px">Gathered automatically from public calendars every 3 hours. Always confirm details with the organizer.</p>
+  <p style="font-size:12px">Gathered automatically from public calendars once a day, early in the morning. Always confirm details with the organizer.</p>
 </footer>
 
 <a class="fab" id="tipBtn" target="_blank" rel="noopener">＋ Add a tip</a>
@@ -367,7 +367,7 @@ function showSources(){
     const label = s.status==="ok"&&s.count ? `${s.count} events` : s.status==="error" ? "not reachable" : "nothing found";
     return `<div class="src"><div>${s.site?`<a href="${esc(s.site)}" target="_blank" rel="noopener">${esc(s.name)}</a>`:esc(s.name)}</div><div class="s ${cls}">${label}</div>${s.error&&cls!=="ok"?`<div class="err">${esc(s.error)}</div>`:""}</div>`;
   }).join("");
-  $("#dlgBody").innerHTML = `<h3>Sources &amp; status</h3><p class="meta">Last scan ${ago(DATA.updated)}. The scan runs every 3 hours; tap “Scan now” to run it immediately (needs your GitHub sign-in).</p>${rows||"<p>No scan yet.</p>"}
+  $("#dlgBody").innerHTML = `<h3>Sources &amp; status</h3><p class="meta">Last scan ${ago(DATA.updated)}. The scan runs once a day, early in the morning; tap “Scan now” to run it immediately (needs your GitHub sign-in).</p>${rows||"<p>No scan yet.</p>"}
     <div class="btns" style="display:flex;gap:8px;margin-top:14px;flex-wrap:wrap"><a class="btn primary" target="_blank" rel="noopener" href="https://github.com/${REPO}/actions/workflows/collect.yml">Scan now</a><a class="btn" target="_blank" rel="noopener" href="https://github.com/${REPO}/edit/main/docs/data/sources.json">Add a source</a><button class="btn" onclick="dlg.close()">Close</button></div>`;
   $("#dlg").showModal();
 }

@@ -2,7 +2,7 @@ name: Scan for events
 
 on:
   schedule:
-    - cron: "17 */3 * * *"   # every 3 hours
+    - cron: "23 12 * * *"    # once a day, about 4–5 AM Pacific
   workflow_dispatch: {}       # "Run workflow" button = scan now
 
 permissions:

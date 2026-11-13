@@ -720,7 +720,7 @@ def ics_escape(s):
 
 def write_ics(events, path):
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//wenatchee-activities//Plan Ahead//EN", "CALSCALE:GREGORIAN",
-             "X-WR-CALNAME:" + (REGION.get("name") or "Wenatchee Area") + " – Plan Ahead", "X-WR-TIMEZONE:" + str(TZ), "REFRESH-INTERVAL;VALUE=DURATION:PT6H"]
+             "X-WR-CALNAME:" + (REGION.get("name") or "Wenatchee Area") + " – Plan Ahead", "X-WR-TIMEZONE:" + str(TZ), "REFRESH-INTERVAL;VALUE=DURATION:PT24H"]
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     for e in events:
         s, _ = parse_dt(e["start"])

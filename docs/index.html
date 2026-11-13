@@ -70,6 +70,7 @@
   .b.tix{background:#f9dcd6;color:#8a2414}
   .b.free{background:#d8eedd;color:#1d5a2b}
   .b.truck{background:#e8e0f6;color:#4a2f7d}
+  .b.social{background:#dbe8f7;color:#1d4677}
   @media (prefers-color-scheme:dark){ .b.new{background:#4a3612;color:#ffd890} .b.tix{background:#4a1f18;color:#ffb5a6} .b.free{background:#173a22;color:#a6e3b5} .b.truck{background:#2e2446;color:#d3c2f5} }
   .actions{display:flex;gap:6px;margin-top:9px;flex-wrap:wrap}
   .actions a,.actions button{font:600 12.5px var(--ff);border:1px solid var(--line);background:none;color:var(--ink);padding:5px 9px;border-radius:8px;text-decoration:none;cursor:pointer}
@@ -208,7 +209,7 @@ function timeBlock(e, showDate){
   return `<div class="when"><div class="t">${t[0].replace(":00","")}</div><div class="ap">${t[1]||""}</div>${date}</div>`;
 }
 function card(e, opts={}){
-  const where = [e.venue, e.town].filter(Boolean).join(" · ");
+  const where = [e.venue, e.town].filter(Boolean).join(" · ") || "";
   const badges = [];
   if(isNew(e)) badges.push(`<span class="b new">🆕 New</span>`);
   if(e.ticketed && !e.big && !e.ticketUrl) badges.push(`<span class="b tix">🎟 Tickets</span>`);
@@ -217,6 +218,7 @@ function card(e, opts={}){
   if(e.cost && !e.free) badges.push(`<span class="b">${esc(e.cost)}</span>`);
   e.cats.forEach(c=>badges.push(`<span class="b">${CATS[c]||c}</span>`));
   if(e.tip) badges.push(`<span class="b">📣 Tip</span>`);
+  if(e.social) badges.push(`<span class="b social">${e.social==="Bluesky"?"🦋":"💬"} ${e.social} post · check details</span>`);
   const map = where ? `<a target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent([e.venue,e.address||e.town,"WA"].filter(Boolean).join(", "))}">📍 Map</a>` : "";
   const tix = e.ticketUrl && e.ticketUrl!==e.url ? `<a class="get" target="_blank" rel="noopener" href="${esc(e.ticketUrl)}">🎟 Tickets</a>` : (e.big && e.url ? `<a class="get" target="_blank" rel="noopener" href="${esc(e.url)}">🎟 Get tickets</a>` : "");
   const also = opts.also && opts.also.length ? `<div class="also">🔁 Also ${opts.also.slice(0,4).map(fmtShort).join(", ")}${opts.also.length>4?` +${opts.also.length-4} more`:""}</div>` : "";
@@ -230,7 +232,7 @@ function card(e, opts={}){
       ${e.desc?`<div class="desc">${esc(e.desc)}</div>`:""}
       ${also}
       <div class="badges">${badges.join("")}</div>
-      <div class="actions">${tix}<a href="${esc(e.url||"#")}" target="_blank" rel="noopener">Details</a>${map}<button data-ics="${e.id}">📅 Add</button></div>
+      <div class="actions">${tix}<a href="${esc(e.url||"#")}" target="_blank" rel="noopener">${e.social?"View post":"Details"}</a>${map}<button data-ics="${e.id}">📅 Add</button></div>
     </div></article>`;
 }
 function groupRepeats(list){

@@ -26,7 +26,7 @@ every 3 hours ─► GitHub Actions runs scripts/collect.py
                    └─ opens an alert issue for newly announced big events
 GitHub Pages ─► docs/index.html shows the events
 ```
-Sources include the Leavenworth, Lake Chelan, Wenatchee Valley, Cashmere, Entiat and Quincy chambers; Visit Wenatchee; Wenatchee Outdoors; WSU Extension; Numerica PAC; Town Toyota Center; WVC; Pybus Market; NCW Libraries; Wenatchee River Institute; Icicle Creek Center for the Arts; plus Eventbrite, Songkick (including the Gorge) and Bandsintown, filtered to this area.
+Sources include the Leavenworth, Lake Chelan, Wenatchee Valley, Cashmere, Entiat and Quincy chambers; Visit Wenatchee; Wenatchee Outdoors; WSU Extension; Numerica PAC; Town Toyota Center; WVC; Pybus Market; NCW Libraries; Wenatchee River Institute; Icicle Creek Center for the Arts; plus AllEvents (which includes many public Facebook events), HappeningNext and Songkick (including the Gorge), plus event posts on Reddit (r/Wenatchee and nearby) and Bluesky that mention a date, all filtered to this area.
 
 The **Sources & status** link at the bottom of the site shows which sources are working and how many events each one found. Some sites block automated readers or change their layout. To add or fix one, edit `docs/data/sources.json` (the `_help` line at the top explains the format).
 

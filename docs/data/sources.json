@@ -456,6 +456,40 @@
      "https://happeningnext.com/quincy"
     ]
    ]
+  },
+  {
+   "id": "reddit",
+   "name": "Reddit (r/Wenatchee & nearby)",
+   "town": "Wenatchee",
+   "site": "https://www.reddit.com/r/Wenatchee/",
+   "strategies": [
+    [
+     "reddit",
+     "Wenatchee",
+     "Leavenworth",
+     "LakeChelan",
+     "Chelan"
+    ]
+   ]
+  },
+  {
+   "id": "bluesky",
+   "name": "Bluesky posts",
+   "aggregator": true,
+   "site": "https://bsky.app/search?q=wenatchee",
+   "strategies": [
+    [
+     "bluesky",
+     "wenatchee",
+     "leavenworth wa",
+     "lake chelan",
+     "cashmere wa",
+     "quincy wa",
+     "entiat",
+     "manson wa",
+     "wenatchee food truck"
+    ]
+   ]
   }
  ]
 }

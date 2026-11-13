@@ -407,7 +407,137 @@ def strat_chambermaster(base, *_):
     return out
 
 
-STRATEGIES = {"libcal": strat_libcal, "chambermaster": strat_chambermaster, "tribe": strat_tribe, "ical": strat_ical, "jsonld": strat_jsonld, "discover": strat_discover}
+# ---------------------------------------------------------------- social posts
+MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
+DAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+EVENTISH = re.compile(r"food truck|truck|market|concert|live music|\bband\b|festival|\bfest\b|event|\bshow\b|fundraiser|bazaar|parade|"
+                      r"open house|tournament|\brace\b|\b5k\b|\bfair\b|tasting|trivia|bingo|dinner|breakfast|comedy|perform|"
+                      r"workshop|\bclass\b|meetup|gathering|celebrat|party|swap|craft|lighting|santa|karaoke|open mic|pop.?up|vendor", re.I)
+
+
+def extract_when(text, posted):
+    """Find an upcoming date (and time) in a post. Returns (datetime, all_day) or None."""
+    t = text.lower()
+    base = posted.astimezone(TZ).replace(hour=0, minute=0, second=0, microsecond=0)
+    day = None
+    m = re.search(r"\b(jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sept?(?:ember)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\b\.?\s+(\d{1,2})(?:st|nd|rd|th)?\b", t)
+    if m:
+        mo, d = MONTHS[m.group(1)[:3]], int(m.group(2))
+        try:
+            day = base.replace(month=mo, day=d)
+        except ValueError:
+            day = None
+    if not day:
+        m = re.search(r"(?<![\d/$])(\d{1,2})/(\d{1,2})(?:/(\d{2,4}))?(?![\d/%])", t)
+        if m and 1 <= int(m.group(1)) <= 12:
+            try:
+                day = base.replace(month=int(m.group(1)), day=int(m.group(2)))
+            except ValueError:
+                day = None
+    if day and day < base - timedelta(days=3):
+        try:
+            day = day.replace(year=day.year + 1)
+        except ValueError:
+            return None
+    if not day:
+        if re.search(r"\b(tonight|today|this evening|this afternoon)\b", t):
+            day = base
+        elif re.search(r"\btomorrow\b", t):
+            day = base + timedelta(days=1)
+        else:
+            m = re.search(r"\b(this|next|on|every)?\s*(" + "|".join(DAYS) + r")\b", t)
+            if m and m.group(1) != "every":
+                ahead = (DAYS.index(m.group(2)) - base.weekday()) % 7
+                if m.group(1) == "next" and ahead == 0:
+                    ahead = 7
+                day = base + timedelta(days=ahead)
+    if not day or not (0 <= (day - base).days <= 150):
+        return None
+    m = re.search(r"\b(\d{1,2})(?::(\d{2}))?\s*(?:-|–|to)\s*\d{1,2}(?::\d{2})?\s*(am|pm|a\.m\.|p\.m\.)", t) or \
+        re.search(r"\b(\d{1,2})(?::(\d{2}))?\s*(am|pm|a\.m\.|p\.m\.)", t)
+    if m:
+        h, mi = int(m.group(1)), int(m.group(2) or 0)
+        if 1 <= h <= 12:
+            if m.group(3).startswith("p") and h != 12:
+                h += 12
+            if m.group(3).startswith("a") and h == 12:
+                h = 0
+            return day.replace(hour=h, minute=mi), False
+    return day, True
+
+
+def _social_event(text, title, url, posted, network):
+    if not EVENTISH.search(text):
+        return None
+    when = extract_when(text, posted)
+    if not when:
+        return None
+    start, allday = when
+    if start < NOW - timedelta(hours=2):
+        return None
+    return {"title": title, "start": start.isoformat(), "allDay": allday, "url": url, "desc": clean(text, 300),
+            "venue": "", "address": "", "social": network, "tags": [network]}
+
+
+def strat_reddit(*subs):
+    import xml.etree.ElementTree as ET
+    ns = {"a": "http://www.w3.org/2005/Atom"}
+    out = []
+    for sub in subs:
+        try:
+            root = ET.fromstring(fetch(f"https://www.reddit.com/r/{sub}/new/.rss?limit=100", "application/atom+xml"))
+        except Exception as ex:
+            print(f"   ! r/{sub}: {ex}")
+            continue
+        for en in root.findall("a:entry", ns):
+            title = clean(en.findtext("a:title", "", ns))
+            body = clean(en.findtext("a:content", "", ns))
+            body = re.sub(r"submitted by /u/\S+.*$", "", body).strip()
+            link = (en.find("a:link", ns).get("href") if en.find("a:link", ns) is not None else "")
+            posted, _ = parse_dt(en.findtext("a:published", "", ns) or en.findtext("a:updated", "", ns))
+            if not posted or posted < NOW - timedelta(days=45):
+                continue
+            ev = _social_event(title + ". " + body, title[:140], link, posted, "Reddit")
+            if ev:
+                ev["address"] = f"r/{sub}"
+                out.append(ev)
+        time.sleep(2)
+    return out
+
+
+def strat_bluesky(*queries):
+    out, seen = [], set()
+    for q in queries:
+        url = "https://api.bsky.app/xrpc/app.bsky.feed.searchPosts?" + urllib.parse.urlencode({"q": q, "limit": 100, "sort": "latest"})
+        try:
+            data = json.loads(fetch(url, "application/json"))
+        except Exception as ex:
+            print(f"   ! bluesky '{q}': {ex}")
+            continue
+        for p in data.get("posts", []):
+            if p["uri"] in seen:
+                continue
+            seen.add(p["uri"])
+            a = p.get("author", {})
+            who = (a.get("handle", "") + " " + (a.get("displayName") or "")).lower()
+            if "bot" in who or "nws" in who or "alert" in who:
+                continue
+            rec = p.get("record", {})
+            text = rec.get("text", "")
+            posted, _ = parse_dt(rec.get("createdAt"))
+            if not posted or posted < NOW - timedelta(days=45) or not find_area(text):
+                continue
+            first = re.split(r"(?<=[.!?])\s|\n", text.strip())[0]
+            link = f"https://bsky.app/profile/{a.get('handle')}/post/{p['uri'].rsplit('/', 1)[-1]}"
+            ev = _social_event(text, clean(first, 120), link, posted, "Bluesky")
+            if ev:
+                ev["address"] = text
+                out.append(ev)
+        time.sleep(1)
+    return out
+
+
+STRATEGIES = {"reddit": strat_reddit, "bluesky": strat_bluesky, "libcal": strat_libcal, "chambermaster": strat_chambermaster, "tribe": strat_tribe, "ical": strat_ical, "jsonld": strat_jsonld, "discover": strat_discover}
 
 
 # ---------------------------------------------------------------- normalize
@@ -444,9 +574,14 @@ def finalize(raw, src):
         "desc": raw.get("desc", ""), "cost": (raw.get("cost") or "")[:60], "image": raw.get("image"),
         "ticketUrl": raw.get("ticketUrl"), "tags": [t for t in raw.get("tags", []) if t][:5],
         "sources": [src["name"]], "_concerts": bool(src.get("concerts")),
+        "social": raw.get("social"),
     }
     categorize(e)
     del e["_concerts"]
+    if e.get("social"):
+        e["address"] = ""
+    else:
+        e.pop("social", None)
     base = re.split(r"\s@\s?|\s+[-–|]\s+(?=[A-Z][a-z]+ (?:Performing|Center|Theater|Theatre|Amphitheat))", e["title"])[0]
     if venue:
         vw = re.escape(venue.split()[0])

@@ -650,6 +650,8 @@ def finalize(raw, src):
     }
     categorize(e)
     del e["_concerts"]
+    if src.get("bigTitles"):   # a source can say which of its events are Plan Ahead material
+        e["big"] = bool(re.search(src["bigTitles"], e["title"], re.I)) and not e["free"]
     if e.get("social"):
         e["address"] = ""
     else:

@@ -1,12 +1,17 @@
-import re, sys, os, json
+import re, sys, os, json, collections
 sys.path.insert(0, os.path.dirname(__file__))
 import collect as c
-b = c.fetch("https://ncwlibraries.libcal.com/ajax/calendar/list?c=-1&date=0000-00-00&perpage=48&page=1&audience=&cats=&camps=&inc=0")
-d = json.loads(b); r = d["results"][3]
-print("LIBCAL keys:", list(r.keys())); print(json.dumps({k: (v if len(str(v)) < 150 else str(v)[:150]) for k, v in r.items()}, indent=0)[:2500])
-print("LIBCAL campuses:", sorted({x.get("campus") or x.get("location") or "" for x in d["results"]}))
-b = c.fetch("https://www.calendarwiz.com/cwapi.php?crd=visitwenatchee&view=l")
-print("CW len", len(b)); print(b[:2500])
+b = json.loads(c.fetch("https://www.calendarwiz.com/cwapi.php?crd=visitwenatchee&view=l"))
+print("CW top keys:", list(b.keys()))
+for k, v in b.items():
+    if isinstance(v, list) and v and isinstance(v[0], dict): print("CW list", k, len(v), json.dumps(v[0])[:900])
+    if isinstance(v, dict) and k not in ("status", "settings"): print("CW dict", k, json.dumps(v)[:900])
 b = c.fetch("https://events.timely.fun/api/calendars/54735125/export?format=ics")
-i = b.find("BEGIN:VEVENT"); print("TIMELY", b[i:i+1800])
-locs = re.findall(r"\nLOCATION:([^\r\n]*)", b); print("TIMELY locs sample:", locs[:25])
+lines = c.unfold_ics(b)
+props = collections.Counter(l.split(":")[0].split(";")[0] for l in lines if ":" in l)
+print("TIMELY props:", props.most_common(40))
+evs = c.strat_ical("https://events.timely.fun/api/calendars/54735125/export?format=ics")
+print("TIMELY parsed", len(evs))
+up = [e for e in evs if c.parse_dt(e["start"])[0] and c.parse_dt(e["start"])[0] > c.NOW]
+print("TIMELY upcoming", len(up))
+for e in up[:25]: print("  ", e["start"][:16], e["title"][:60], "| loc:", e.get("address","")[:60], "| area:", c.find_area(e.get("venue"), e.get("address"), e["title"], e.get("desc")))

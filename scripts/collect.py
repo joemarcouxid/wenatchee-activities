@@ -23,9 +23,12 @@ UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
 # ---------------------------------------------------------------- geography
 # (area shown in the app, words that identify it, ZIP codes)
 AREAS = [
-    ("Leavenworth", ["lake wenatchee", "leavenworth", "plain, wa", "plain wa", "icicle road", "front street, leavenworth"], ["98826"]),
+    ("Leavenworth", ["lake wenatchee", "leavenworth", "red barn", "wenatchee river institute", "snowy owl", "icicle creek center",
+                     "sleeping lady", "festhalle", "water from wine", "mountain springs lodge", "a book for all seasons", "icicle brewing",
+                     "kris kringl", "boulder bend", "front street park", "munchen haus", "münchen haus", "goose ridge: leavenworth", "plain, wa", "plain wa", "icicle road", "front street, leavenworth"], ["98826"]),
     ("East Wenatchee", ["east wenatchee", "rock island", "orondo"], ["98802", "98850", "98843"]),
-    ("Wenatchee", ["wenatchee", "malaga", "mission ridge", "sunnyslope"], ["98801", "98807", "98828"]),
+    ("Wenatchee", ["weinstein beverage", "town toyota", "pybus", "numerica", "convention center", "wenatchee valley college",
+                   "riverfront park", "pinnacle beerworks", "wenatchee", "malaga", "mission ridge", "sunnyslope"], ["98801", "98807", "98828"]),
     ("Cashmere", ["cashmere", "peshastin", "dryden", "monitor, wa"], ["98815", "98847", "98821", "98836"]),
     ("Entiat", ["entiat", "ardenvoir"], ["98822", "98811"]),
     ("Chelan", ["chelan", "manson", "stehekin"], ["98816", "98831", "98817", "98852"]),
@@ -34,7 +37,9 @@ AREAS = [
 AREA_NAMES = [a[0] for a in AREAS]
 # Places that contain our town names but are elsewhere
 NOT_HERE = ["quincy, ma", "quincy, il", "quincy, ca", "quincy, fl", "chelan county pud", "seattle", "spokane", "yakima",
-            "ellensburg", "moses lake", "ephrata", "twisp", "winthrop", "omak", "tacoma", "bellevue", "everett", "kennewick"]
+            "ellensburg", "moses lake", "ephrata", "twisp", "winthrop", "omak", "tacoma", "bellevue", "everett", "kennewick",
+            "darrington", "royal city", "warden", "waterville", "brewster", "grand coulee", "coulee city", "republic", "curlew", "bothell",
+            "redmond", "portland", "boise", "walla walla", "richland", "pasco", "cle elum", "roslyn", "bellingham", "olympia"]
 
 
 def find_area(*texts):
@@ -195,8 +200,15 @@ def ics_dt(prop, value):
 def strat_ical(*urls):
     out = []
     for url in urls:
+        out += _ical_text(fetch(url, "text/calendar"))
+    return out
+
+
+def _ical_text(text):
+    out = []
+    if True:
         cur = None
-        for line in unfold_ics(fetch(url, "text/calendar")):
+        for line in unfold_ics(text):
             if line.startswith("BEGIN:VEVENT"):
                 cur = {"tags": []}
             elif line.startswith("END:VEVENT") and cur is not None:
@@ -222,6 +234,10 @@ def strat_ical(*urls):
                     cur["url"] = val.strip()
                 elif name == "CATEGORIES":
                     cur["tags"] = [clean(c) for c in val.split(",")]
+                elif name == "X-TICKETS-URL":
+                    cur["ticketUrl"] = val.strip()
+                elif name == "X-COST":
+                    cur["cost"] = clean(val)
                 elif name == "ATTACH" and "image" in prop.lower():
                     cur["image"] = val.strip()
     # an all-day DTEND is exclusive; pull it back one day
@@ -353,7 +369,45 @@ def strat_discover(url, *_):
     return []
 
 
-STRATEGIES = {"tribe": strat_tribe, "ical": strat_ical, "jsonld": strat_jsonld, "discover": strat_discover}
+def strat_libcal(base, *_):
+    """Springshare LibCal public event list (JSON)."""
+    out, page = [], 1
+    while page <= 30:
+        q = urllib.parse.urlencode({"c": -1, "date": "0000-00-00", "perpage": 48, "page": page, "audience": "", "cats": "", "camps": "", "inc": 0})
+        data = json.loads(fetch(f"{base.rstrip('/')}/ajax/calendar/list?{q}", "application/json"))
+        res = data.get("results") or []
+        for r in res:
+            out.append({"title": clean(r.get("title")), "start": r.get("startdt"), "end": r.get("enddt"), "allDay": bool(r.get("all_day")),
+                        "url": r.get("url"), "desc": clean(r.get("shortdesc") or r.get("description"), 300),
+                        "venue": clean(f"{r.get('campus') or ''} Library {r.get('location') or ''}".strip()),
+                        "address": clean(r.get("campus")), "cost": clean(r.get("registration_cost")),
+                        "tags": [clean(x.get("name")) for x in (r.get("categories_arr") or [])]})
+        if not res or page * 48 >= int(data.get("total_results") or 0):
+            break
+        page += 1
+    return out
+
+
+def strat_chambermaster(base, *_):
+    """GrowthZone / ChamberMaster: list upcoming events, then read each event's iCal file."""
+    base = base.rstrip("/")
+    f, t = NOW.strftime("%m/%d/%Y"), (NOW + timedelta(days=365)).strftime("%m/%d/%Y")
+    page = fetch(f"{base}/events?from={f}&to={t}&o=alpha", "text/html")
+    slugs = list(dict.fromkeys(re.findall(r"/events/details/([\w-]+-\d+)", page)))[:80]
+    out = []
+    for slug in slugs:
+        try:
+            ics = fetch(f"{base}/events/addtocalendar/{slug}?format=ICal", "text/calendar")
+        except Exception:
+            continue
+        for e in _ical_text(ics):
+            e["url"] = e.get("url") or f"{base}/events/details/{slug}"
+            out.append(e)
+        time.sleep(0.4)
+    return out
+
+
+STRATEGIES = {"libcal": strat_libcal, "chambermaster": strat_chambermaster, "tribe": strat_tribe, "ical": strat_ical, "jsonld": strat_jsonld, "discover": strat_discover}
 
 
 # ---------------------------------------------------------------- normalize
@@ -367,6 +421,8 @@ def finalize(raw, src):
     s, allday = parse_dt(raw.get("start"))
     if not s or not raw.get("title"):
         return None
+    if src.get("exclude") and re.search(src["exclude"], raw["title"] + " | " + " ".join(raw.get("tags", [])), re.I):
+        return None
     e_dt, _ = parse_dt(raw.get("end"))
     if not e_dt or e_dt < s:
         e_dt = s if allday else s + timedelta(hours=2)
@@ -379,9 +435,9 @@ def finalize(raw, src):
         if not area:
             return None
     else:
-        if not area and far_away(venue, address):
+        if not area and far_away(venue, address, raw["title"], raw.get("desc", "")):
             return None
-        area = area or find_area(raw["title"]) or src.get("town")
+        area = area or find_area(raw["title"], raw.get("desc", "")) or src.get("town")
     e = {
         "title": raw["title"][:160], "start": s.isoformat(), "end": e_dt.isoformat(), "allDay": allday,
         "venue": venue[:120], "address": address[:200], "town": area, "url": raw.get("url") or src.get("site"),

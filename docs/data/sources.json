@@ -2,6 +2,18 @@
  "_help": "Each source is tried with its strategies in order until one returns events. Strategies: tribe (WordPress 'The Events Calendar' REST API), ical (a .ics feed URL), jsonld (schema.org Event data embedded in a web page), discover (look for calendar feed links on the page). 'town' is the fallback town when an event has no address. 'aggregator: true' means events are kept only if their address is inside our area. 'concerts: true' marks every event from the source as a Plan Ahead candidate. Set 'enabled': false to switch a source off.",
  "sources": [
   {
+   "id": "wenatchee-world",
+   "name": "Wenatchee World community calendar",
+   "town": "Wenatchee",
+   "site": "https://www.wenatcheeworld.com/calendar/",
+   "strategies": [
+    [
+     "ical",
+     "https://events.timely.fun/api/calendars/54735125/export?format=ics"
+    ]
+   ]
+  },
+  {
    "id": "leavenworth",
    "name": "Leavenworth Chamber",
    "town": "Leavenworth",
@@ -51,7 +63,8 @@
      "discover",
      "https://business.wenatchee.org/events"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "visit-wenatchee",
@@ -71,7 +84,8 @@
      "discover",
      "https://www.visitwenatchee.org/events"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "wenatchee-outdoors",
@@ -106,6 +120,31 @@
    ]
   },
   {
+   "id": "mission-ridge",
+   "name": "Mission Ridge",
+   "town": "Wenatchee",
+   "site": "https://www.missionridge.com/events/",
+   "exclude": "restaurant open|possible open|chairs|operations|lift|\\\\bopen\\\\b$|closed",
+   "strategies": [
+    [
+     "tribe",
+     "https://www.missionridge.com"
+    ]
+   ]
+  },
+  {
+   "id": "quincy-chambermaster",
+   "name": "Quincy Valley Chamber",
+   "town": "Quincy",
+   "site": "https://quincyvalleywa.chambermaster.com/events/",
+   "strategies": [
+    [
+     "chambermaster",
+     "https://quincyvalleywa.chambermaster.com"
+    ]
+   ]
+  },
+  {
    "id": "numerica-pac",
    "name": "Numerica Performing Arts Center",
    "town": "Wenatchee",
@@ -124,7 +163,8 @@
      "discover",
      "https://www.numericapac.org/"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "town-toyota",
@@ -141,7 +181,8 @@
      "discover",
      "https://www.towntoyotacenter.com/events"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "wvc",
@@ -157,7 +198,8 @@
      "discover",
      "https://calendar.wvc.edu/"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "pybus",
@@ -177,27 +219,22 @@
      "discover",
      "https://www.pybuspublicmarket.org/events"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "ncw-libraries",
    "name": "NCW Libraries",
    "town": "Wenatchee",
-   "site": "https://www.ncwlibraries.org/events/",
+   "site": "https://ncwlibraries.libcal.com/calendar",
    "strategies": [
     [
-     "tribe",
-     "https://www.ncwlibraries.org"
-    ],
-    [
-     "jsonld",
-     "https://www.ncwlibraries.org/events/"
-    ],
-    [
-     "discover",
-     "https://www.ncwlibraries.org/events/"
+     "libcal",
+     "https://ncwlibraries.libcal.com"
     ]
-   ]
+   ],
+   "aggregator": true,
+   "exclude": "not public|parada privada|bookmobile"
   },
   {
    "id": "wri",
@@ -266,7 +303,8 @@
      "discover",
      "https://www.entiatchamber.org/"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "quincy-chamber",
@@ -282,7 +320,8 @@
      "discover",
      "https://business.quincychamber.org/events"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "quincy-valley",
@@ -298,7 +337,8 @@
      "discover",
      "https://quincyvalleywa.chambermaster.com/events/"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "east-wenatchee-city",
@@ -326,7 +366,8 @@
      "discover",
      "https://www.wenatcheewa.gov/"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "eventbrite",
@@ -344,7 +385,8 @@
      "https://www.eventbrite.com/d/wa--quincy/all-events/",
      "https://www.eventbrite.com/d/wa--cashmere/all-events/"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "songkick",
@@ -377,7 +419,8 @@
      "https://www.bandsintown.com/c/chelan-wa",
      "https://www.bandsintown.com/c/george-wa"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "allevents",

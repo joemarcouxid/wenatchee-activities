@@ -154,8 +154,9 @@ ls.set("lastVisit", new Date().toISOString());
 const D = s => new Date(s);
 const sod = d => { const x=new Date(d); x.setHours(0,0,0,0); return x; };
 const addDays = (d,n) => { const x=new Date(d); x.setDate(x.getDate()+n); return x; };
-const fmtDay = d => d.toLocaleDateString("en-US",{weekday:"long",month:"short",day:"numeric"});
-const fmtShort = d => d.toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric"});
+let TZ;  // the region's time zone, from events.json (e.g. Missoula is on Mountain time)
+const fmtDay = d => d.toLocaleDateString("en-US",{weekday:"long",month:"short",day:"numeric",timeZone:TZ});
+const fmtShort = d => d.toLocaleDateString("en-US",{weekday:"short",month:"short",day:"numeric",timeZone:TZ});
 function windowFor(tab){
   const now = new Date(), today = sod(now), dow = today.getDay();
   switch(tab){
@@ -204,9 +205,9 @@ const longRunning = (e,a) => (D(e.end)-D(e.start)) > 3*864e5 && D(e.start) < a;
 function esc(s){ return (s||"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c])); }
 function timeBlock(e, showDate){
   const s=D(e.start);
-  const date = showDate ? `<div class="d">${s.toLocaleDateString("en-US",{month:"short",day:"numeric"})}</div>` : "";
+  const date = showDate ? `<div class="d">${s.toLocaleDateString("en-US",{month:"short",day:"numeric",timeZone:TZ})}</div>` : "";
   if(e.allDay) return `<div class="when"><div class="t">All</div><div class="ap">DAY</div>${date}</div>`;
-  const t = s.toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit"}).split(" ");
+  const t = s.toLocaleTimeString("en-US",{hour:"numeric",minute:"2-digit",timeZone:TZ}).split(" ");
   return `<div class="when"><div class="t">${t[0].replace(":00","")}</div><div class="ap">${t[1]||""}</div>${date}</div>`;
 }
 function card(e, opts={}){
@@ -292,7 +293,7 @@ function render(){
   const groupBy = (tab==="year"||tab==="plan"||tab==="saved") ? "month" : "day";
   for(const {e,also} of items){
     const s = D(e.start) < a ? a : D(e.start);
-    const key = groupBy==="month" ? s.toLocaleDateString("en-US",{month:"long",year:"numeric"}) : fmtDay(sod(s));
+    const key = groupBy==="month" ? s.toLocaleDateString("en-US",{month:"long",year:"numeric",timeZone:TZ}) : fmtDay(s);
     if(key!==lastKey){
       const lbl = groupBy==="day" && sod(s).getTime()===sod(new Date()).getTime() ? "Today · "+key : key;
       html += `<h2 class="day"><span>${lbl}</span></h2>`; lastKey = key;
@@ -348,6 +349,7 @@ async function load(manual){
     if(!DATA.events) DATA.events = [];
     if(!DATA.sources) DATA.sources = [];
     if(DATA.areas && DATA.areas.length) AREAS = DATA.areas;
+    if(DATA.region && DATA.region.tz) TZ = DATA.region.tz;
     if(DATA.region && DATA.region.name){ document.querySelector(".brand h1").textContent = DATA.region.name; document.title = DATA.region.name; }
     BASELINE = DATA.events.reduce((m,e)=>Math.min(m, D(e.firstSeen).getTime()), Infinity);
     renderMeta(); render();

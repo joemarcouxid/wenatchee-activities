@@ -14,7 +14,12 @@ from zoneinfo import ZoneInfo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = os.path.join(ROOT, "docs", "data")
-TZ = ZoneInfo("America/Los_Angeles")
+try:
+    with open(os.path.join(DATA, "region.json")) as _f:
+        _REGION_EARLY = json.load(_f)
+except Exception:
+    _REGION_EARLY = {}
+TZ = ZoneInfo(_REGION_EARLY.get("tz", "America/Los_Angeles"))
 NOW = datetime.now(TZ)
 HORIZON = NOW + timedelta(days=400)
 UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) "
@@ -548,7 +553,55 @@ def strat_bluesky(*queries):
     return out
 
 
-STRATEGIES = {"reddit": strat_reddit, "bluesky": strat_bluesky, "libcal": strat_libcal, "chambermaster": strat_chambermaster, "tribe": strat_tribe, "ical": strat_ical, "jsonld": strat_jsonld, "discover": strat_discover}
+def strat_crawl(list_url, link_pattern, limit=40, *_):
+    """Open a listing page, follow links matching link_pattern, read schema.org Event data on each detail page."""
+    page = fetch(list_url, "text/html")
+    links = []
+    for h in re.findall(r'href=["\']([^"\']+)["\']', page):
+        if re.search(link_pattern, h):
+            u = urllib.parse.urljoin(list_url, html.unescape(h)).split("#")[0]
+            if u not in links:
+                links.append(u)
+    out = []
+    for u in links[:int(limit)]:
+        try:
+            out += strat_jsonld(u)
+        except Exception:
+            continue
+    return out
+
+
+def strat_communico(base, *_):
+    """Communico (libnet.info) library event calendar."""
+    req = json.dumps({"private": False, "date": NOW.strftime("%Y-%m-%d"), "days": 60, "locations": [], "ages": [], "types": []})
+    data = json.loads(fetch(f"{base.rstrip('/')}/eeventcaldata?event_type=0&req=" + urllib.parse.quote(req), "application/json"))
+    out = []
+    for r in data if isinstance(data, list) else data.get("events", []):
+        if str(r.get("private", "0")) in ("1", "true", "True"):
+            continue
+        start = r.get("raw_start_time") or r.get("event_start")
+        out.append({"title": clean(r.get("title")), "start": start, "end": r.get("raw_end_time") or r.get("event_end"),
+                    "url": f"{base.rstrip('/')}/event/{r.get('id')}", "desc": clean(r.get("description") or r.get("long_description"), 300),
+                    "venue": clean(f"{r.get('library') or ''} {r.get('location') or ''}".strip()), "address": clean(r.get("library")),
+                    "tags": [clean(t) for t in str(r.get("tags") or "").split(",") if t.strip()][:3]})
+    return out
+
+
+def strat_engage(base, *_):
+    """Campus Labs Engage (student event hubs such as GrizHub)."""
+    q = urllib.parse.urlencode({"endsAfter": NOW.strftime("%Y-%m-%dT%H:%M:%S%z"), "orderByField": "endsOn", "orderByDirection": "ascending",
+                                "status": "Approved", "take": 100, "query": ""})
+    data = json.loads(fetch(f"{base.rstrip('/')}/api/discovery/event/search?{q}", "application/json"))
+    out = []
+    for r in data.get("value", []):
+        out.append({"title": clean(r.get("name")), "start": r.get("startsOn"), "end": r.get("endsOn"),
+                    "url": f"{base.rstrip('/')}/event/{r.get('id')}", "desc": clean(r.get("description"), 300),
+                    "venue": clean(r.get("location")), "address": clean(r.get("location")),
+                    "tags": [clean(x) for x in (r.get("categoryNames") or [])][:3]})
+    return out
+
+
+STRATEGIES = {"crawl": strat_crawl, "communico": strat_communico, "engage": strat_engage, "reddit": strat_reddit, "bluesky": strat_bluesky, "libcal": strat_libcal, "chambermaster": strat_chambermaster, "tribe": strat_tribe, "ical": strat_ical, "jsonld": strat_jsonld, "discover": strat_discover}
 
 
 # ---------------------------------------------------------------- normalize
@@ -634,7 +687,7 @@ def ics_escape(s):
 
 def write_ics(events, path):
     lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//wenatchee-activities//Plan Ahead//EN", "CALSCALE:GREGORIAN",
-             "X-WR-CALNAME:Wenatchee Area – Plan Ahead", "X-WR-TIMEZONE:America/Los_Angeles", "REFRESH-INTERVAL;VALUE=DURATION:PT6H"]
+             "X-WR-CALNAME:" + (REGION.get("name") or "Wenatchee Area") + " – Plan Ahead", "X-WR-TIMEZONE:" + str(TZ), "REFRESH-INTERVAL;VALUE=DURATION:PT6H"]
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")
     for e in events:
         s, _ = parse_dt(e["start"])
@@ -728,7 +781,7 @@ def main():
         sys.exit(0)
 
     with open(prev_path, "w") as f:
-        json.dump({"updated": stamp, "areas": REGION.get("displayOrder") or AREA_NAMES, "region": {k: REGION.get(k) for k in ("name", "tagline", "repo")}, "sources": health, "events": events}, f, separators=(",", ":"))
+        json.dump({"updated": stamp, "areas": REGION.get("displayOrder") or AREA_NAMES, "region": {k: REGION.get(k) for k in ("name", "tagline", "repo", "tz")}, "sources": health, "events": events}, f, separators=(",", ":"))
     big = [e for e in events if e["big"]]
     write_ics(big, os.path.join(DATA, "plan-ahead.ics"))
     with open(os.path.join(DATA, "new-big.json"), "w") as f:

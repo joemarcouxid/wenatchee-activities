@@ -391,7 +391,11 @@ def finalize(raw, src):
     }
     categorize(e)
     del e["_concerts"]
-    key = norm_title(e["title"]) + "|" + s.date().isoformat()
+    base = re.split(r"\s@\s?|\s+[-–|]\s+(?=[A-Z][a-z]+ (?:Performing|Center|Theater|Theatre|Amphitheat))", e["title"])[0]
+    if venue:
+        vw = re.escape(venue.split()[0])
+        base = re.split(r"\s+at\s+(?:the\s+)?" + vw, base, flags=re.I)[0]
+    key = norm_title(base) + "|" + s.date().isoformat()
     e["id"] = hashlib.sha1(key.encode()).hexdigest()[:12]
     return e
 

@@ -501,7 +501,7 @@ def strat_reddit(*subs):
             if ev:
                 ev["address"] = f"r/{sub}"
                 out.append(ev)
-        time.sleep(2)
+        time.sleep(8)
     return out
 
 

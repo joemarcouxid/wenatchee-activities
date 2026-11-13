@@ -27,9 +27,11 @@ for u in URLS:
             except Exception: pass
         kws = [k for k in KEYS if k in body.lower()]
         print(f"OK[{name}] {u} st={st} len={len(body)} ld={len(acc)} vevent={body.count('BEGIN:VEVENT')} kw={kws}")
-        if u.endswith("json") or "wp-json" in u or "api" in u:
-            print("   body:", body[:600].replace("\n"," "))
+        if "json" in u or "api" in u or "rss" in u or "ical" in u or "params" in u:
+            print("   body:", body[:1500].replace("\n"," "))
         else:
-            for x in sorted(set(re.findall(r'(?:src|href|data-[a-z-]+)="([^"]*(?:api|json|feed|ical|ics|calendar|event)[^"]*)"', body, re.I)))[:14]:
+            for x in re.findall(r'(?:cid|calendar_id|calendarId|venue_id|venue|organization)["\']?\s*[:=]\s*["\']?([\w-]{2,40})', body)[:8]:
+                print("   id:", x)
+            for x in sorted(set(re.findall(r'(?:src|href|data-[a-z-]+)="([^"]*(?:api|json|feed|ical|ics|calendar|event|rss)[^"]*)"', body, re.I)))[:14]:
                 print("   ref:", x[:170])
         break

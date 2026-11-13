@@ -432,7 +432,7 @@ def strat_chambermaster(base, *_):
 MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"], 1)}
 DAYS = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 EVENTISH = re.compile(r"food truck|truck|market|concert|live music|\bband\b|festival|\bfest\b|event|\bshow\b|fundraiser|bazaar|parade|"
-                      r"open house|tournament|\brace\b|\b5k\b|\bfair\b|tasting|trivia|bingo|dinner|breakfast|comedy|perform|"
+                      r"open house|tournament|fun run|run/walk|\b5k\b|\bfair\b|tasting|trivia|bingo|dinner|breakfast|comedy|perform|"
                       r"workshop|\bclass\b|meetup|gathering|celebrat|party|swap|craft|lighting|santa|karaoke|open mic|pop.?up|vendor", re.I)
 
 
@@ -487,8 +487,11 @@ def extract_when(text, posted):
     return day, True
 
 
+NEWSY = re.compile(r"\b(AP calls|election results|ballots? (?:count|drop)|arrested|charged with|sentenced|lawsuit|obituary|for sale|looking for (?:a )?(?:job|roommate|apartment))\b", re.I)
+
+
 def _social_event(text, title, url, posted, network):
-    if not EVENTISH.search(text):
+    if not EVENTISH.search(text) or NEWSY.search(text):
         return None
     when = extract_when(text, posted)
     if not when:

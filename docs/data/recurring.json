@@ -1,0 +1,80 @@
+{
+ "_help": "Weekly seasonal events the app fills in automatically. weekdays: 0=Mon ... 5=Sat, 6=Sun. months: 1-12. Optional from/until as MM-DD to trim the first/last month. Times are 24-hour local time. Check season dates each spring.",
+ "recurring": [
+  {
+   "title": "Wenatchee Valley Farmers Market",
+   "weekdays": [
+    5
+   ],
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "from": "05-08",
+   "start": "08:00",
+   "end": "13:00",
+   "venue": "Pybus Public Market parking lot",
+   "address": "7 N Worthen St, Wenatchee, WA 98801",
+   "url": "https://marketspread.com/market/12546/wenatchee-valley-farmers-market",
+   "tags": [
+    "Farmers market",
+    "market"
+   ],
+   "cost": "Free",
+   "desc": "Saturday farmers market: local fruit and vegetables, flowers, artisan goods and food. Season dates are approximate; confirm with the market."
+  },
+  {
+   "title": "Leavenworth Community Farmers Market",
+   "weekdays": [
+    5
+   ],
+   "months": [
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "start": "09:00",
+   "end": "13:00",
+   "venue": "Lions Club Park",
+   "address": "700 Hwy 2, Leavenworth, WA 98826",
+   "tags": [
+    "Farmers market",
+    "market"
+   ],
+   "cost": "Free",
+   "url": "https://www.google.com/search?q=Leavenworth+Community+Farmers+Market",
+   "desc": "Saturday community farmers market. Season dates are approximate; confirm with the market."
+  },
+  {
+   "title": "Chelan Evening Farmers Market",
+   "weekdays": [
+    3
+   ],
+   "months": [
+    5,
+    6,
+    7,
+    8,
+    9,
+    10
+   ],
+   "start": "14:00",
+   "end": "18:00",
+   "venue": "218 S Emerson St",
+   "address": "218 S Emerson St, Chelan, WA 98816",
+   "tags": [
+    "Farmers market",
+    "market"
+   ],
+   "cost": "Free",
+   "desc": "Thursday afternoon farmers market. Season dates are approximate; confirm with the market.",
+   "url": "https://www.google.com/search?q=Chelan+Evening+Farmers+Market"
+  }
+ ]
+}

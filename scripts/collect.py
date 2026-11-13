@@ -609,7 +609,30 @@ def strat_engage(base, *_):
     return out
 
 
-STRATEGIES = {"crawl": strat_crawl, "communico": strat_communico, "engage": strat_engage, "reddit": strat_reddit, "bluesky": strat_bluesky, "libcal": strat_libcal, "chambermaster": strat_chambermaster, "tribe": strat_tribe, "ical": strat_ical, "jsonld": strat_jsonld, "discover": strat_discover}
+def strat_recurring(*_):
+    """Weekly seasonal events (farmers markets, etc.) listed by hand in docs/data/recurring.json."""
+    path = os.path.join(DATA, "recurring.json")
+    if not os.path.exists(path):
+        return []
+    with open(path) as f:
+        items = json.load(f).get("recurring", [])
+    out, today = [], NOW.date()
+    for it in items:
+        for i in range(0, 380):
+            d = today + timedelta(days=i)
+            if d.weekday() not in it["weekdays"] or d.month not in it["months"]:
+                continue
+            if it.get("from") and d.strftime("%m-%d") < it["from"] and d.month == it["months"][0]:
+                continue
+            if it.get("until") and d.strftime("%m-%d") > it["until"] and d.month == it["months"][-1]:
+                continue
+            out.append({"title": it["title"], "start": f"{d.isoformat()}T{it['start']}:00", "end": f"{d.isoformat()}T{it['end']}:00",
+                        "venue": it.get("venue", ""), "address": it.get("address", ""), "url": it.get("url"),
+                        "desc": it.get("desc", ""), "cost": it.get("cost", ""), "tags": it.get("tags", [])})
+    return out
+
+
+STRATEGIES = {"recurring": strat_recurring, "crawl": strat_crawl, "communico": strat_communico, "engage": strat_engage, "reddit": strat_reddit, "bluesky": strat_bluesky, "libcal": strat_libcal, "chambermaster": strat_chambermaster, "tribe": strat_tribe, "ical": strat_ical, "jsonld": strat_jsonld, "discover": strat_discover}
 
 
 # ---------------------------------------------------------------- normalize

@@ -491,6 +491,16 @@
      "wenatchee food truck"
     ]
    ]
+  },
+  {
+   "id": "recurring",
+   "name": "Seasonal markets (recurring.json)",
+   "site": "https://github.com/joemarcouxid/wenatchee-activities/blob/main/docs/data/recurring.json",
+   "strategies": [
+    [
+     "recurring"
+    ]
+   ]
   }
  ]
 }

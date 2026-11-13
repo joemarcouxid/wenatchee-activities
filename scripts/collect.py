@@ -61,13 +61,18 @@ def find_area(*texts):
     t = " ".join(x for x in texts if x).lower()
     if not t:
         return None
+    # exact ZIP codes first, then venue/town words, then broad ZIP ranges (e.g. 598xx)
     for name, _, zips in AREAS:
         for z in zips:
-            if re.search(r"\b%s\b" % z, t):
+            if z.isdigit() and re.search(r"\b%s\b" % z, t):
                 return name
     for name, words, _ in AREAS:
         for w in words:
             if w in t:
+                return name
+    for name, _, zips in AREAS:
+        for z in zips:
+            if not z.isdigit() and re.search(r"\b%s\b" % z, t):
                 return name
     return None
 

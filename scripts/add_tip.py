@@ -5,7 +5,7 @@ import json, os, re, sys
 from datetime import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-PATH = os.path.join(ROOT, "data", "tips.json")
+PATH = os.path.join(ROOT, "docs", "data", "tips.json")
 
 
 def fields(body):

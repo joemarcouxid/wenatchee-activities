@@ -20,20 +20,20 @@ One place to see what's going on in the Wenatchee Valley: **Wenatchee, East Wena
 ## How it works
 ```
 every 3 hours ─► GitHub Actions runs scripts/collect.py
-                   ├─ reads ~20 public calendars listed in data/sources.json
+                   ├─ reads ~20 public calendars listed in docs/data/sources.json
                    ├─ removes duplicates, tags each event by town and kind
-                   ├─ writes data/events.json and data/plan-ahead.ics
+                   ├─ writes docs/data/events.json and plan-ahead.ics
                    └─ opens an alert issue for newly announced big events
-GitHub Pages ─► index.html shows data/events.json
+GitHub Pages ─► docs/index.html shows the events
 ```
 Sources include the Leavenworth, Lake Chelan, Wenatchee Valley, Cashmere, Entiat and Quincy chambers; Visit Wenatchee; Wenatchee Outdoors; WSU Extension; Numerica PAC; Town Toyota Center; WVC; Pybus Market; NCW Libraries; Wenatchee River Institute; Icicle Creek Center for the Arts; plus Eventbrite, Songkick (including the Gorge) and Bandsintown, filtered to this area.
 
-The **Sources & status** link at the bottom of the site shows which sources are working and how many events each one found. Some sites block automated readers or change their layout. To add or fix one, edit `data/sources.json` (the `_help` line at the top explains the format).
+The **Sources & status** link at the bottom of the site shows which sources are working and how many events each one found. Some sites block automated readers or change their layout. To add or fix one, edit `docs/data/sources.json` (the `_help` line at the top explains the format).
 
 ## Food trucks and small stuff
 Most food trucks only post on Facebook or Instagram, which can't be read automatically. The app catches the ones that show up on brewery, cidery, chamber and Eventbrite calendars. For everything else, tap **＋ Add a tip**. It opens a short form; when you submit it, the event shows up on the site in a minute or two. Only tips from you or collaborators you add are published.
 
 ## One-time setup
-1. **Settings → Pages →** Source: *Deploy from a branch*, Branch: `main` / `(root)` → Save.
+1. **Settings → Pages →** Source: *Deploy from a branch*, Branch: `main` / `/docs` (already set) → Save.
 2. **Actions → "Scan for events" → Run workflow** to do the first scan right away. After that it runs on its own every 3 hours.
 3. **Watch** the repo (top right) so new-event alerts reach you.

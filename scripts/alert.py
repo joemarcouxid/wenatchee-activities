@@ -4,7 +4,7 @@ import json, os
 from datetime import datetime
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-with open(os.path.join(ROOT, "data", "new-big.json")) as f:
+with open(os.path.join(ROOT, "docs", "data", "new-big.json")) as f:
     new = json.load(f)
 new = [e for e in new if datetime.fromisoformat(e["start"]) > datetime.now(datetime.fromisoformat(e["start"]).tzinfo)]
 if new:

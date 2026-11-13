@@ -13,7 +13,7 @@ from html.parser import HTMLParser
 from zoneinfo import ZoneInfo
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-DATA = os.path.join(ROOT, "data")
+DATA = os.path.join(ROOT, "docs", "data")
 TZ = ZoneInfo("America/Los_Angeles")
 NOW = datetime.now(TZ)
 HORIZON = NOW + timedelta(days=400)

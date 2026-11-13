@@ -42,6 +42,16 @@ NOT_HERE = ["quincy, ma", "quincy, il", "quincy, ca", "quincy, fl", "chelan coun
             "redmond", "portland", "boise", "walla walla", "richland", "pasco", "cle elum", "roslyn", "bellingham", "olympia"]
 
 
+REGION = {}
+_rp = os.path.join(DATA, "region.json")
+if os.path.exists(_rp):
+    with open(_rp) as _f:
+        REGION = json.load(_f)
+    AREAS = [(x["name"], x["words"], x.get("zips", [])) for x in REGION["areas"]]
+    NOT_HERE = REGION.get("notHere", [])
+AREA_NAMES = [a[0] for a in AREAS]
+
+
 def find_area(*texts):
     t = " ".join(x for x in texts if x).lower()
     if not t:
@@ -81,6 +91,7 @@ CATS = [
 ]
 BIG_VENUES = ["gorge amphitheat", "the gorge", "town toyota center", "numerica", "performing arts center", "festhalle",
               "snowy owl theater", "icicle creek center", "convention center", "cave b", "leavenworth summer theater", "ski hill amphitheater"]
+BIG_VENUES = REGION.get("bigVenues", BIG_VENUES)
 TICKET_WORDS = ["tickets", "ticket", "on sale", "presale", "pre-sale", "sold out", "reserved seating", "general admission", "box office"]
 
 
@@ -717,7 +728,7 @@ def main():
         sys.exit(0)
 
     with open(prev_path, "w") as f:
-        json.dump({"updated": stamp, "areas": AREA_NAMES, "sources": health, "events": events}, f, separators=(",", ":"))
+        json.dump({"updated": stamp, "areas": AREA_NAMES, "region": {k: REGION.get(k) for k in ("name", "tagline", "repo")}, "sources": health, "events": events}, f, separators=(",", ":"))
     big = [e for e in events if e["big"]]
     write_ics(big, os.path.join(DATA, "plan-ahead.ics"))
     with open(os.path.join(DATA, "new-big.json"), "w") as f:

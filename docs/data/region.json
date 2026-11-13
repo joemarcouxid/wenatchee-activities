@@ -1,0 +1,183 @@
+{
+ "name": "⛰️ Valley Happenings",
+ "tagline": "Wenatchee · Leavenworth · Chelan · Quincy",
+ "repo": "joemarcouxid/wenatchee-activities",
+ "areas": [
+  {
+   "name": "Leavenworth",
+   "words": [
+    "lake wenatchee",
+    "leavenworth",
+    "red barn",
+    "wenatchee river institute",
+    "snowy owl",
+    "icicle creek center",
+    "sleeping lady",
+    "festhalle",
+    "water from wine",
+    "mountain springs lodge",
+    "a book for all seasons",
+    "icicle brewing",
+    "kris kringl",
+    "boulder bend",
+    "front street park",
+    "munchen haus",
+    "münchen haus",
+    "goose ridge: leavenworth",
+    "plain, wa",
+    "plain wa",
+    "icicle road",
+    "front street, leavenworth"
+   ],
+   "zips": [
+    "98826"
+   ]
+  },
+  {
+   "name": "East Wenatchee",
+   "words": [
+    "east wenatchee",
+    "rock island",
+    "orondo"
+   ],
+   "zips": [
+    "98802",
+    "98850",
+    "98843"
+   ]
+  },
+  {
+   "name": "Wenatchee",
+   "words": [
+    "weinstein beverage",
+    "town toyota",
+    "pybus",
+    "numerica",
+    "convention center",
+    "wenatchee valley college",
+    "riverfront park",
+    "pinnacle beerworks",
+    "wenatchee",
+    "malaga",
+    "mission ridge",
+    "sunnyslope"
+   ],
+   "zips": [
+    "98801",
+    "98807",
+    "98828"
+   ]
+  },
+  {
+   "name": "Cashmere",
+   "words": [
+    "cashmere",
+    "peshastin",
+    "dryden",
+    "monitor, wa"
+   ],
+   "zips": [
+    "98815",
+    "98847",
+    "98821",
+    "98836"
+   ]
+  },
+  {
+   "name": "Entiat",
+   "words": [
+    "entiat",
+    "ardenvoir"
+   ],
+   "zips": [
+    "98822",
+    "98811"
+   ]
+  },
+  {
+   "name": "Chelan",
+   "words": [
+    "chelan",
+    "manson",
+    "stehekin"
+   ],
+   "zips": [
+    "98816",
+    "98831",
+    "98817",
+    "98852"
+   ]
+  },
+  {
+   "name": "Quincy",
+   "words": [
+    "quincy",
+    "george, wa",
+    "george wa",
+    "gorge amphitheat",
+    "the gorge",
+    "crescent bar",
+    "cave b",
+    "sunland estates"
+   ],
+   "zips": [
+    "98848",
+    "98824"
+   ]
+  }
+ ],
+ "notHere": [
+  "quincy, ma",
+  "quincy, il",
+  "quincy, ca",
+  "quincy, fl",
+  "chelan county pud",
+  "seattle",
+  "spokane",
+  "yakima",
+  "ellensburg",
+  "moses lake",
+  "ephrata",
+  "twisp",
+  "winthrop",
+  "omak",
+  "tacoma",
+  "bellevue",
+  "everett",
+  "kennewick",
+  "darrington",
+  "royal city",
+  "warden",
+  "waterville",
+  "brewster",
+  "grand coulee",
+  "coulee city",
+  "republic",
+  "curlew",
+  "bothell",
+  "redmond",
+  "portland",
+  "boise",
+  "walla walla",
+  "richland",
+  "pasco",
+  "cle elum",
+  "roslyn",
+  "bellingham",
+  "olympia"
+ ],
+ "bigVenues": [
+  "gorge amphitheat",
+  "the gorge",
+  "town toyota center",
+  "numerica",
+  "performing arts center",
+  "festhalle",
+  "snowy owl theater",
+  "icicle creek center",
+  "convention center",
+  "cave b",
+  "leavenworth summer theater",
+  "ski hill amphitheater"
+ ]
+}

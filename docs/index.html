@@ -131,8 +131,9 @@
 <div class="toast" id="toast"></div>
 
 <script>
-const REPO = "joemarcouxid/wenatchee-activities";
-const AREAS = ["Wenatchee","East Wenatchee","Cashmere","Leavenworth","Entiat","Chelan","Quincy"];
+let REPO = "joemarcouxid/wenatchee-activities";   // replaced from the site address when hosted on GitHub Pages
+if(/\.github\.io$/.test(location.hostname)){ const seg=location.pathname.split("/").filter(Boolean); if(seg[0]) REPO = location.hostname.split(".")[0]+"/"+seg[0]; }
+let AREAS = ["Wenatchee","East Wenatchee","Cashmere","Leavenworth","Entiat","Chelan","Quincy"];
 const CATS = {food:"🍔 Food & Drink",music:"🎵 Music",family:"👨‍👩‍👧 Family",outdoors:"🥾 Outdoors",sports:"🏃 Races & Sports",arts:"🎭 Arts & Shows",markets:"🛍 Markets",festivals:"🎉 Festivals",community:"🤝 Community"};
 const TABS = [["today","Today"],["weekend","This Weekend"],["week","Next 7 Days"],["month","This Month"],["year","This Year"],["plan","🎟 Plan Ahead"],["saved","⭐ My List"]];
 const $ = s => document.querySelector(s);
@@ -305,6 +306,7 @@ function render(){
 }
 function renderMeta(){
   const ok = DATA.sources.filter(s=>s.status==="ok" && s.count).length;
+  if(!DATA.updated && DATA.region && DATA.region.tagline) { $("#sub").textContent = DATA.region.tagline; return; }
   $("#sub").textContent = DATA.updated ? `Updated ${ago(DATA.updated)} · ${DATA.events.length} events · ${ok} sources` : "Waiting for first scan";
   $("#foot").textContent = DATA.updated ? `Last scan: ${D(DATA.updated).toLocaleString("en-US",{weekday:"short",month:"short",day:"numeric",hour:"numeric",minute:"2-digit"})}` : "";
 }
@@ -345,6 +347,8 @@ async function load(manual){
     DATA = await r.json();
     if(!DATA.events) DATA.events = [];
     if(!DATA.sources) DATA.sources = [];
+    if(DATA.areas && DATA.areas.length) AREAS = DATA.areas;
+    if(DATA.region && DATA.region.name){ document.querySelector(".brand h1").textContent = DATA.region.name; document.title = DATA.region.name; }
     BASELINE = DATA.events.reduce((m,e)=>Math.min(m, D(e.firstSeen).getTime()), Infinity);
     renderMeta(); render();
     if(manual) toast(DATA.updated ? `Refreshed. Latest scan was ${ago(DATA.updated)}.` : "No scan yet. Tap “Scan now on GitHub”.");

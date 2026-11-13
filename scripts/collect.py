@@ -728,7 +728,7 @@ def main():
         sys.exit(0)
 
     with open(prev_path, "w") as f:
-        json.dump({"updated": stamp, "areas": AREA_NAMES, "region": {k: REGION.get(k) for k in ("name", "tagline", "repo")}, "sources": health, "events": events}, f, separators=(",", ":"))
+        json.dump({"updated": stamp, "areas": REGION.get("displayOrder") or AREA_NAMES, "region": {k: REGION.get(k) for k in ("name", "tagline", "repo")}, "sources": health, "events": events}, f, separators=(",", ":"))
     big = [e for e in events if e["big"]]
     write_ics(big, os.path.join(DATA, "plan-ahead.ics"))
     with open(os.path.join(DATA, "new-big.json"), "w") as f:

@@ -117,6 +117,7 @@
     <div class="row" id="towns"></div>
     <div class="row" id="cats"></div>
   </div>
+  <div id="stale"></div>
   <div id="banner"></div>
   <div id="list"></div>
 </main>
@@ -355,6 +356,8 @@ async function load(manual){
     if(DATA.region && DATA.region.name){ document.querySelector(".brand h1").textContent = DATA.region.name; document.title = DATA.region.name; }
     BASELINE = DATA.events.reduce((m,e)=>Math.min(m, D(e.firstSeen).getTime()), Infinity);
     renderMeta(); render();
+    const stale = !DATA.updated || (Date.now()-D(DATA.updated)) > 6*36e5;
+    $("#stale").innerHTML = (manual && stale) ? `<div class="banner"><div>🛰️</div><div><b>Latest scan was ${ago(DATA.updated)}</b>Refresh shows the newest scan. To gather fresh events, run a new scan (takes about 3 minutes, then tap 🔄 again).<div class="btns"><a class="btn primary" target="_blank" rel="noopener" href="https://github.com/${REPO}/actions/workflows/collect.yml">Run a new scan</a></div></div></div>` : "";
     if(manual) toast(DATA.updated ? `Refreshed. Latest scan was ${ago(DATA.updated)}.` : "No scan yet. Tap “Scan now on GitHub”.");
   }catch(err){
     if(!DATA){ DATA = {events:[],sources:[],updated:null}; renderMeta(); render(); }

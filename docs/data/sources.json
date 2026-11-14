@@ -120,6 +120,54 @@
    ]
   },
   {
+   "id": "wenatchee-downtown",
+   "name": "Wenatchee Downtown Association",
+   "town": "Wenatchee",
+   "site": "https://www.wendowntown.org/events",
+   "strategies": [
+    [
+     "ical",
+     "https://www.wendowntown.org/events?format=ical"
+    ],
+    [
+     "jsonld",
+     "https://www.wendowntown.org/events"
+    ]
+   ]
+  },
+  {
+   "id": "wenatchee-chamber2",
+   "name": "Wenatchee Valley Chamber",
+   "town": "Wenatchee",
+   "site": "https://www.wenatcheechamber.org/events",
+   "strategies": [
+    [
+     "ical",
+     "https://www.wenatcheechamber.org/events?format=ical"
+    ],
+    [
+     "discover",
+     "https://www.wenatcheechamber.org/events"
+    ]
+   ]
+  },
+  {
+   "id": "sleeping-lady",
+   "name": "Sleeping Lady Mountain Resort",
+   "town": "Leavenworth",
+   "site": "https://www.sleepinglady.com/events/",
+   "strategies": [
+    [
+     "tribe",
+     "https://www.sleepinglady.com"
+    ],
+    [
+     "jsonld",
+     "https://www.sleepinglady.com/events/"
+    ]
+   ]
+  },
+  {
    "id": "mission-ridge",
    "name": "Mission Ridge",
    "town": "Wenatchee",
@@ -221,6 +269,20 @@
     ]
    ],
    "enabled": false
+  },
+  {
+   "id": "meetup",
+   "name": "Meetup groups",
+   "aggregator": true,
+   "site": "https://www.meetup.com/find/?location=us--wa--Wenatchee&source=EVENTS",
+   "strategies": [
+    [
+     "jsonld",
+     "https://www.meetup.com/find/?location=us--wa--Wenatchee&source=EVENTS",
+     "https://www.meetup.com/find/?location=us--wa--Leavenworth&source=EVENTS",
+     "https://www.meetup.com/find/?location=us--wa--Chelan&source=EVENTS"
+    ]
+   ]
   },
   {
    "id": "ncw-libraries",
@@ -439,7 +501,17 @@
      "https://allevents.in/cashmere",
      "https://allevents.in/entiat",
      "https://allevents.in/quincy",
-     "https://allevents.in/george"
+     "https://allevents.in/george",
+     "https://allevents.in/wenatchee/all?page=2",
+     "https://allevents.in/wenatchee/all?page=3",
+     "https://allevents.in/wenatchee/all?page=4",
+     "https://allevents.in/wenatchee/food-drinks",
+     "https://allevents.in/wenatchee/music",
+     "https://allevents.in/wenatchee/kids",
+     "https://allevents.in/wenatchee/arts",
+     "https://allevents.in/wenatchee/sports",
+     "https://allevents.in/wenatchee/festivals",
+     "https://allevents.in/wenatchee/workshops"
     ]
    ]
   },

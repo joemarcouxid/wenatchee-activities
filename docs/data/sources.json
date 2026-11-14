@@ -133,7 +133,8 @@
      "jsonld",
      "https://www.wendowntown.org/events"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "wenatchee-chamber2",
@@ -149,7 +150,8 @@
      "discover",
      "https://www.wenatcheechamber.org/events"
     ]
-   ]
+   ],
+   "enabled": false
   },
   {
    "id": "sleeping-lady",
@@ -165,7 +167,8 @@
      "jsonld",
      "https://www.sleepinglady.com/events/"
     ]
-   ]
+   ],
+   "exclude": "resort yoga|s.mores|closed for private|guest|members only"
   },
   {
    "id": "mission-ridge",

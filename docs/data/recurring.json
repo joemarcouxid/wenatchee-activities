@@ -12,20 +12,21 @@
     7,
     8,
     9,
-    10
+    10,
+    11,
+    12
    ],
-   "from": "05-08",
    "start": "08:00",
    "end": "13:00",
    "venue": "Pybus Public Market parking lot",
    "address": "7 N Worthen St, Wenatchee, WA 98801",
-   "url": "https://marketspread.com/market/12546/wenatchee-valley-farmers-market",
+   "url": "https://www.wenatcheefarmersmarket.com/",
    "tags": [
     "Farmers market",
     "market"
    ],
    "cost": "Free",
-   "desc": "Saturday farmers market: local fruit and vegetables, flowers, artisan goods and food. Season dates are approximate; confirm with the market."
+   "desc": "Saturday farmers market in the Pybus parking lot, May through December: produce, flowers, artisan goods, food and live music. Late-season dates can change; confirm with the market."
   },
   {
    "title": "Leavenworth Community Farmers Market",

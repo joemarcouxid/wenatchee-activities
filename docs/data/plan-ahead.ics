@@ -4,10 +4,10 @@ PRODID:-//wenatchee-activities//Plan Ahead//EN
 CALSCALE:GREGORIAN
 X-WR-CALNAME:⛰️ Valley Happenings – Plan Ahead
 X-WR-TIMEZONE:America/Los_Angeles
-REFRESH-INTERVAL;VALUE=DURATION:PT6H
+REFRESH-INTERVAL;VALUE=DURATION:PT24H
 BEGIN:VEVENT
 UID:a256abe15ee0@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20260926
 DTEND;VALUE=DATE:20270328
 SUMMARY:Wenatchee Wild vs. Everett Silvertips
@@ -22,7 +22,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f0c884940e7c@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261016
 DTEND;VALUE=DATE:20261129
 SUMMARY:Penticton Vees at Wenatchee Wild at Town Toyota Center
@@ -36,83 +36,8 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:d4f5e180c3eb@wenatchee-activities
-DTSTAMP:20261113T193429Z
-DTSTART:20261114T000000Z
-DTEND:20261114T030000Z
-SUMMARY:Live Music w/ Ray Glover
-LOCATION:Goose Ridge: Leavenworth Tasting Room\, Leavenworth
-DESCRIPTION:As the singer/guitarist for the DIMESTORE PROPHETS\, Ray Glover paints a melodious atmosphere\, bringing a fine blend of acoustic covers showcasing contemporary and classic top 40 hits. Ray’s poignant vocals and smooth rhythmic approach engulf listeners in what can only be described as “feeling good”.\nhttps://www.gooseridge.com/leavenworth/
-URL:https://www.gooseridge.com/leavenworth/
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Get tickets: Live Music w/ Ray Glover
-TRIGGER:-P21D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:c32ade2001cb@wenatchee-activities
-DTSTAMP:20261113T193429Z
-DTSTART:20261114T030000Z
-DTEND:20261114T050000Z
-SUMMARY:Dwight Yoakam @ Town Toyota Center
-LOCATION:Town Toyota Center\, Wenatchee
-DESCRIPTION:Dwight Yoakam at Town Toyota Center at 2026-11-13T19:00:00-0800\nhttp://www.songkick.com/concerts/43378275-dwight-yoakam-at-town-toyota-center?utm_medium=organic&utm_source=microformat
-URL:http://www.songkick.com/concerts/43378275-dwight-yoakam-at-town-toyota-center?utm_medium=organic&utm_source=microformat
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Get tickets: Dwight Yoakam @ Town Toyota Center
-TRIGGER:-P21D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:eff2cbdab567@wenatchee-activities
-DTSTAMP:20261113T193429Z
-DTSTART;VALUE=DATE:20261114
-DTEND;VALUE=DATE:20261115
-SUMMARY:Holiday Open House & Wine Walk
-LOCATION:103 Palouse St\, Suite 10\, Wenatchee\, WA\, United States\, Washington 98801\, Wenatchee
-DESCRIPTION:Kick off the holiday season in downtown Wenatchee with a cozy evening of shopping\, sipping\, and celebration! This year's Wine Walk features 21 tasting rooms throughout downtown. Your ticket includes a tasting bracelet that gives you access to wine tasti\nhttps://allevents.in/wenatchee/holiday-open-house-and-wine-walk/200030744631612
-URL:https://allevents.in/wenatchee/holiday-open-house-and-wine-walk/200030744631612
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Get tickets: Holiday Open House & Wine Walk
-TRIGGER:-P21D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:32d03a92adbf@wenatchee-activities
-DTSTAMP:20261113T193429Z
-DTSTART;VALUE=DATE:20261114
-DTEND;VALUE=DATE:20261115
-SUMMARY:Jazz Jam Quintet: Music and Dancing
-LOCATION:Studio 509 Dance\, Wenatchee
-DESCRIPTION:$23 Join us for a fun evening of live music and dancing to the Jazz Jam Quintet! Come dance or just watch from our onsite bar\, The Wallflower.Agenda🕑: 07:00 PM - 08:00 PMBegin\nhttps://happeningnext.com/event/jazz-jam-quintet-music-and-dancing-eid1ef0l8re1kla
-URL:https://happeningnext.com/event/jazz-jam-quintet-music-and-dancing-eid1ef0l8re1kla
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Get tickets: Jazz Jam Quintet: Music and Dancing
-TRIGGER:-P21D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
-UID:85479b4008c4@wenatchee-activities
-DTSTAMP:20261113T193429Z
-DTSTART;VALUE=DATE:20261114
-DTEND;VALUE=DATE:20261115
-SUMMARY:Wenatchee Wine and Food Festival
-LOCATION:Wenatchee Convention Center\, Wenatchee
-DESCRIPTION:$103 Foothills Magazine is proud to produce the Wenatchee Wine & Food Festival\, Eastern Washington’s premier food and wine event!About this EventFoothills Magazine is proud to produce the Wenatchee Wine & Food Fe\nhttps://happeningnext.com/event/wenatchee-wine-and-food-festival-eid1ef0l5rcffxr
-URL:https://happeningnext.com/event/wenatchee-wine-and-food-festival-eid1ef0l5rcffxr
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Get tickets: Wenatchee Wine and Food Festival
-TRIGGER:-P21D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:580f15409b07@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261114T170000Z
 DTEND:20261114T220000Z
 SUMMARY:Mountain Market at Mountain Springs Lodge
@@ -127,7 +52,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:41721959b2f6@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261115T000000Z
 DTEND:20261115T050000Z
 SUMMARY:Warren Miller’s Days Off
@@ -142,7 +67,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:89087a81b0b3@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261115T230000Z
 DTEND:20261116T020000Z
 SUMMARY:Live Music w/ Owen Barnhart & Maritza
@@ -157,7 +82,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:30eab91f423e@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261116T020000Z
 DTEND:20261116T050000Z
 SUMMARY:Taste & See Banqueet
@@ -172,7 +97,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f3fe8fe26f75@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261119T030000Z
 DTEND:20261119T060000Z
 SUMMARY:Leavenworth’s Original Comedy Night at Bushel and Bee
@@ -187,7 +112,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f798a2e39b44@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261119T140000Z
 DTEND:20261120T043000Z
 SUMMARY:Girls’ Night Out @NCW Woodshop
@@ -202,7 +127,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:0e394d1c0b48@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261119T180000Z
 DTEND:20261119T220000Z
 SUMMARY:Winter Prep Workday: Mulching for Native Plants
@@ -217,7 +142,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:284744a6a27f@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261120
 DTEND;VALUE=DATE:20261121
 SUMMARY:Comedy! Lagers & Laughs: Travis Sherer & Cara Rosellini!
@@ -232,7 +157,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:7a662514ec26@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261121T000000Z
 DTEND:20261121T030000Z
 SUMMARY:Live Music W/ Kevin Jones
@@ -247,7 +172,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f4a989b7b440@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261121T020000Z
 DTEND:20261121T040000Z
 SUMMARY:Jen Howard @ Union Hill Cider Co. Amphitheater
@@ -262,7 +187,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:75ce7939e7e6@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Laugh Riot 2026 with Andy Woodhull and Jody Carrol
@@ -277,7 +202,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:1b15e5e6cfda@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261121
 DTEND;VALUE=DATE:20261122
 SUMMARY:Saturday\, November 21st: Elvis Presley & Patsy Cline Tribute Show
@@ -292,7 +217,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:5782e30cdd03@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261122
 DTEND;VALUE=DATE:20261123
 SUMMARY:Sunday\, November 22nd: Elvis Presley & Loretta Lynn Tribute Show
@@ -307,7 +232,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9357644cf053@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261123T020000Z
 DTEND:20261123T040000Z
 SUMMARY:Michel @ Wenatchee Convention Center
@@ -322,7 +247,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:feb50ad53864@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261126T170000Z
 DTEND:20261126T190000Z
 SUMMARY:Fowl Play 5k Turkey Trot!
@@ -337,13 +262,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:170aeb24326b@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261127
 DTEND;VALUE=DATE:20270308
 SUMMARY:Wenatchee Wild vs. Kelowna Rockets
 LOCATION:Town Toyota Center\, Wenatchee
-DESCRIPTION:$22 \nhttps://happeningnext.com/event/wenatchee-wild-vs-kelowna-rockets-eid13twixk2lak
-URL:https://happeningnext.com/event/wenatchee-wild-vs-kelowna-rockets-eid13twixk2lak
+DESCRIPTION:$22.00 \nhttps://allevents.in/wenatchee/wenatchee-wild-vs-kelowna-rockets/2300026835484204
+URL:https://allevents.in/wenatchee/wenatchee-wild-vs-kelowna-rockets/2300026835484204
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Get tickets: Wenatchee Wild vs. Kelowna Rockets
@@ -352,7 +277,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2546eecce734@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261128T000000Z
 DTEND:20261128T030000Z
 SUMMARY:Live Music w/ Seth Garrido
@@ -367,7 +292,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:7446986ac495@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261128
 DTEND;VALUE=DATE:20261129
 SUMMARY:Wenatchee Wild vs. Penticton Vees
@@ -382,7 +307,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:54f1760ecffc@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261128T210000Z
 DTEND:20261128T210000Z
 SUMMARY:Rachael Lundin Book Signing
@@ -397,7 +322,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:8823ca24a274@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261129T230000Z
 DTEND:20261130T020000Z
 SUMMARY:Live Music w/ Chris Anderson
@@ -412,7 +337,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f97b3076b4eb@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261202T010000Z
 DTEND:20261202T023000Z
 SUMMARY:Poetry Reading
@@ -427,7 +352,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:eb0d8974d4fa@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261204T030000Z
 DTEND:20261204T060000Z
 SUMMARY:Singer Songwriter Storyteller: December
@@ -442,13 +367,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:9477175562bc@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261204
 DTEND;VALUE=DATE:20261205
 SUMMARY:Little Black Dress Party
 LOCATION:Wenatchee Convention Center\, North Wenatchee Avenue\, Wenatchee\, WA\, USA\, Wenatchee
-DESCRIPTION:$49.87 \nhttps://allevents.in/wenatchee/little-black-dress-party/100002002660704076
-URL:https://allevents.in/wenatchee/little-black-dress-party/100002002660704076
+DESCRIPTION:$50 Grab your friends\, that little black dress\, your favorite party shoes\, and dance the night away at the premier ladies event of the season!About this EventLittle Black Dress EventGr\nhttps://happeningnext.com/event/little-black-dress-party-eid1ef0l84wqk1a
+URL:https://happeningnext.com/event/little-black-dress-party-eid1ef0l84wqk1a
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Get tickets: Little Black Dress Party
@@ -456,8 +381,38 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:9447984023d1@wenatchee-activities
+DTSTAMP:20261114T174820Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:21st Annual Golden Apple Band Boosters' Holiday Craft Bazaar
+LOCATION:Wenatchee High School\, Wenatchee
+DESCRIPTION:More than 150 local vendors offering handmade goods! Buy gifts\, artisanal foods\, coffee and more! Buy tickets for the Band Boosters' Raffle! Enjoy a tasty treat from the Band Boosters' Bake Sale! Donate to help the band get a new truck to transport their\nhttps://allevents.in/wenatchee/21st-annual-golden-apple-band-boosters-holiday-craft-bazaar/200030995558021
+URL:https://allevents.in/wenatchee/21st-annual-golden-apple-band-boosters-holiday-craft-bazaar/200030995558021
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: 21st Annual Golden Apple Band Boosters' Holiday Craft Bazaar
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:25ca6d72a6b1@wenatchee-activities
+DTSTAMP:20261114T174820Z
+DTSTART;VALUE=DATE:20261205
+DTEND;VALUE=DATE:20261206
+SUMMARY:Christmas at No-Limits *READ DESCRIPTION*
+LOCATION:150 S 48th St\, Quincy\, IL\, United States\, Illinois 62305\, Quincy
+DESCRIPTION:For this event and ALL OTHERS\, from now on\, EVERYONE MUST RSVP‼️‼️ This event has a ticket link\, where volunteers and guests can RSVP! December 5th\, 4:00-7:00 PM The Crossing - 48th St. (150 S 48th St.\, Quincy\, IL 62305) NO COST\, please RSVP Theme: Christ\nhttps://allevents.in/quincy/christmas-at-no-limits-read-description/200030991412524
+URL:https://allevents.in/quincy/christmas-at-no-limits-read-description/200030991412524
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Christmas at No-Limits *READ DESCRIPTION*
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:9b23e03aca0d@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261205
 DTEND;VALUE=DATE:20261206
 SUMMARY:The Fab Lads Now & Then: a Complete Beatles Experience Concert
@@ -472,7 +427,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:b2a8d890a217@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261205T170000Z
 DTEND:20261205T213000Z
 SUMMARY:The Met Opera: Samson et Dalila – Saint-Saëns
@@ -487,7 +442,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:62a6b6053483@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261205T210000Z
 DTEND:20261205T230000Z
 SUMMARY:Book Signing @ A Book for All Seasons
@@ -502,7 +457,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d603a4621217@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261206T030000Z
 DTEND:20261206T060000Z
 SUMMARY:A John Prine Christmas with the Jenner Fox Band
@@ -517,7 +472,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2e6098fc5aba@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261206T030000Z
 DTEND:20261206T043000Z
 SUMMARY:Merry Christmas from Leavenworth Concert
@@ -532,7 +487,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c1c53ca6663e@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261206T033000Z
 DTEND:20261206T053000Z
 SUMMARY:Storm Large @ Numerica Performing Arts Center
@@ -547,7 +502,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f3ff2dbe43ff@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261206T230000Z
 DTEND:20261207T010000Z
 SUMMARY:A Special Visit from Italy: Meet Emanuele Fontanini
@@ -562,7 +517,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:800c7e3a0a5b@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261206T230000Z
 DTEND:20261207T010000Z
 SUMMARY:Meet Emanuele Fontanini at Kris Kringl
@@ -577,7 +532,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:0d7f3d8cdab8@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261209T030000Z
 DTEND:20261209T040000Z
 SUMMARY:Red Barn Event: 'The Icicle Calls Us Back' Film Showing
@@ -592,7 +547,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ba75385d7e79@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261211T030000Z
 DTEND:20261211T060000Z
 SUMMARY:Vince Guaraldi’s A Charlie Brown Christmas: Jose Gonzales Trio
@@ -607,7 +562,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:348aaa962767@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261211
 DTEND;VALUE=DATE:20270118
 SUMMARY:Wenatchee Wild vs. Seattle Thunderbirds
@@ -622,7 +577,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:6c00793ad2dd@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261212T030000Z
 DTEND:20261212T060000Z
 SUMMARY:Vince Guaraldi’s A Charlie Brown Christmas: Jose Gonzales Trio
@@ -636,8 +591,23 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:8931c5be7d28@wenatchee-activities
+DTSTAMP:20261114T174820Z
+DTSTART;VALUE=DATE:20261212
+DTEND;VALUE=DATE:20270321
+SUMMARY:Spokane Chiefs at Wenatchee Wild
+LOCATION:Town Toyota Center\, Wenatchee
+DESCRIPTION:$22.00 \nhttps://allevents.in/wenatchee/spokane-chiefs-at-wenatchee-wild/3200027059571725
+URL:https://allevents.in/wenatchee/spokane-chiefs-at-wenatchee-wild/3200027059571725
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Spokane Chiefs at Wenatchee Wild
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:c5f8c8233e57@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261212
 DTEND;VALUE=DATE:20261213
 SUMMARY:VECA Holiday Party 2026 - Wenatchee
@@ -652,7 +622,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:08cb41fc8a03@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261212T220000Z
 DTEND:20261213T003000Z
 SUMMARY:Leavenworth Village Voices: Christmas in the Mountains Matinee
@@ -667,7 +637,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d60c130533a5@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261213T040000Z
 DTEND:20261213T053000Z
 SUMMARY:THE JEWEL TONES Motown Christmas Concert
@@ -681,23 +651,23 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:9a9f755b4df1@wenatchee-activities
-DTSTAMP:20261113T193429Z
-DTSTART;VALUE=DATE:20261215
-DTEND;VALUE=DATE:20261216
-SUMMARY:Calgary Hitmen at Wenatchee Wild at Town Toyota Center
-LOCATION:Town Toyota Center\, Wenatchee
-DESCRIPTION:https://allevents.in/wenatchee/calgary-hitmen-at-wenatchee-wild-at-town-toyota-center/2400030465737259
-URL:https://allevents.in/wenatchee/calgary-hitmen-at-wenatchee-wild-at-town-toyota-center/2400030465737259
+UID:9e864445b656@wenatchee-activities
+DTSTAMP:20261114T174820Z
+DTSTART:20261215T030000Z
+DTEND:20261215T043000Z
+SUMMARY:Leavenworth Village Voices: Singing Through A Winter Wonderland
+LOCATION:Leavenworth
+DESCRIPTION:By donation\, at the door Leavenworth's own choir presents a festive and heartwarming Community Appreciation Concert\, joined by the Bavarian Brass quartet at the Leavenworth Church of the Nazarene. Let's usher in the peace and joy of the season together\, with a rich selection of sacred and secular choral pieces from around…\nhttps://www.leavenworthvillagevoices.org/
+URL:https://www.leavenworthvillagevoices.org/
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Get tickets: Calgary Hitmen at Wenatchee Wild at Town Toyota Center
+DESCRIPTION:Get tickets: Leavenworth Village Voices: Singing Through A Winter Wonderland
 TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f2c5622504f3@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261218T020000Z
 DTEND:20261218T043000Z
 SUMMARY:Girls Night Out at NCW Woodshop @NCW Woodshop
@@ -711,8 +681,38 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:1d9761c9ddff@wenatchee-activities
+DTSTAMP:20261114T174820Z
+DTSTART:20261218T030000Z
+DTEND:20261218T053000Z
+SUMMARY:Magical Strings: Celtic Yuletide
+LOCATION:Snowy Owl Theater at Icicle Creek Center for the Arts\, Leavenworth
+DESCRIPTION:Celtic Yuletide returns to the Snowy Owl stage\, bringing generations together for a joyful celebration as the Boulding family and special guests weave their magic with lively and soulful music\, storytelling and stellar Irish step-dancing. Founded by Pam and Philip Boulding\, Magical Strings has been…\nhttps://icicle.my.salesforce-sites.com/ticket/#/events/a0SPH00000KKGmf2AH
+URL:https://icicle.my.salesforce-sites.com/ticket/#/events/a0SPH00000KKGmf2AH
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Magical Strings: Celtic Yuletide
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:298b36c1838f@wenatchee-activities
+DTSTAMP:20261114T174820Z
+DTSTART:20261219T030000Z
+DTEND:20261219T053000Z
+SUMMARY:Magical Strings: Celtic Yuletide
+LOCATION:Snowy Owl Theater at Icicle Creek Center for the Arts\, Leavenworth
+DESCRIPTION:Celtic Yuletide returns to the Snowy Owl stage\, bringing generations together for a joyful celebration as the Boulding family and special guests weave their magic with lively and soulful music\, storytelling and stellar Irish step-dancing. Founded by Pam and Philip Boulding\, Magical Strings has been…\nhttps://icicle.my.salesforce-sites.com/ticket/#/events/a0SPH00000KKGmf2AH
+URL:https://icicle.my.salesforce-sites.com/ticket/#/events/a0SPH00000KKGmf2AH
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Magical Strings: Celtic Yuletide
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:27117a093923@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261219
 DTEND;VALUE=DATE:20261220
 SUMMARY:Dance To Glorify- The Nutcracker
@@ -727,7 +727,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:09375c706c7b@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261220
 DTEND;VALUE=DATE:20261221
 SUMMARY:GEOFFREY CASTLE’S CELTIC CHRISTMAS ~ 20TH ANNIVERSARY TOUR
@@ -742,7 +742,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:417f1539058a@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261220T230000Z
 DTEND:20261221T013000Z
 SUMMARY:WVSO + Columbia Chorale | Heaven & Nature Sing
@@ -757,7 +757,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:4a315f8185da@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261221T010000Z
 DTEND:20261221T023000Z
 SUMMARY:Christmas Spectactular with Manuela Horn and her Slay-belles!
@@ -772,7 +772,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d4e4ffd918ad@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261223T010000Z
 DTEND:20261223T023000Z
 SUMMARY:Christmas Spectactular with Manuela Horn and her Slay-belles!
@@ -787,7 +787,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:8fd986fb5dbd@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261223
 DTEND;VALUE=DATE:20261224
 SUMMARY:Holiday Cookie Decorating @ The Cove
@@ -802,7 +802,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bdcdb460ca97@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20261224T210000Z
 DTEND:20261224T230000Z
 SUMMARY:Photos with Santa Downtown
@@ -817,7 +817,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:68857913c80b@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20261231
 DTEND;VALUE=DATE:20270328
 SUMMARY:Everett Silvertips at Wenatchee Wild at Town Toyota Center
@@ -832,7 +832,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:5d7e8ee566ac@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270101T030000Z
 DTEND:20270101T050000Z
 SUMMARY:New Year's Eve Dance feat. Wenatchee Big Band
@@ -847,7 +847,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:5d9d08bf8f98@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20270101
 DTEND;VALUE=DATE:20270201
 SUMMARY:Village of Lights: Winter Karneval
@@ -861,23 +861,23 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:9911d4a138ee@wenatchee-activities
-DTSTAMP:20261113T193429Z
-DTSTART;VALUE=DATE:20270106
-DTEND;VALUE=DATE:20270107
-SUMMARY:Edmonton Oil Kings at Wenatchee Wild at Town Toyota Center
+UID:08cc9b5c48bf@wenatchee-activities
+DTSTAMP:20261114T174820Z
+DTSTART;VALUE=DATE:20270102
+DTEND;VALUE=DATE:20270320
+SUMMARY:Wenatchee Wild vs. Portland Winterhawks
 LOCATION:Town Toyota Center\, Wenatchee
-DESCRIPTION:https://allevents.in/wenatchee/edmonton-oil-kings-at-wenatchee-wild-at-town-toyota-center/2400030467742301
-URL:https://allevents.in/wenatchee/edmonton-oil-kings-at-wenatchee-wild-at-town-toyota-center/2400030467742301
+DESCRIPTION:$22.00 \nhttps://allevents.in/wenatchee/wenatchee-wild-vs-portland-winterhawks/2300026835484914
+URL:https://allevents.in/wenatchee/wenatchee-wild-vs-portland-winterhawks/2300026835484914
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Get tickets: Edmonton Oil Kings at Wenatchee Wild at Town Toyota Center
+DESCRIPTION:Get tickets: Wenatchee Wild vs. Portland Winterhawks
 TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c7b6f3215460@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270108T030000Z
 DTEND:20270108T050000Z
 SUMMARY:Singer Songwriter Storyteller: January
@@ -892,7 +892,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:6cb80a08448b@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20270116
 DTEND;VALUE=DATE:20270117
 SUMMARY:Dancing with the Wenatchee Stars
@@ -907,7 +907,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:455c4c8010e4@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20270122
 DTEND;VALUE=DATE:20270123
 SUMMARY:Joel Gibson Jr. @ Lake Chelan Winterfest - Full Band
@@ -922,7 +922,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:442db838c603@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270123T180000Z
 DTEND:20270123T220000Z
 SUMMARY:The Met Opera: La Fanciulla del West – Puccini
@@ -937,7 +937,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:28b377f40d56@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20270128
 DTEND;VALUE=DATE:20270129
 SUMMARY:Patrick Warburton
@@ -952,7 +952,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:64ab8ca8214f@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270205T030000Z
 DTEND:20270205T053000Z
 SUMMARY:Singer Songwriter Storyteller: February
@@ -967,7 +967,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:7ea0c279c352@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270214T030000Z
 DTEND:20270214T053000Z
 SUMMARY:Seraph Brass @ ICCA
@@ -982,7 +982,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:c161dae55c8d@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20270217
 DTEND;VALUE=DATE:20270218
 SUMMARY:Mardi Gras Mambo at Numerica Performing Arts Center
@@ -997,7 +997,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:d963f63c51ae@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20270220
 DTEND;VALUE=DATE:20270221
 SUMMARY:Hell's Belles - Tribute to AC/DC
@@ -1011,8 +1011,23 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:0fbdc2470ea3@wenatchee-activities
+DTSTAMP:20261114T174820Z
+DTSTART;VALUE=DATE:20270303
+DTEND;VALUE=DATE:20270304
+SUMMARY:Candlelight Celtic at Numerica Performing Arts Center
+LOCATION:Numerica Performing Arts Center\, Wenatchee
+DESCRIPTION:https://allevents.in/wenatchee/candlelight-celtic-at-numerica-performing-arts-center/2400030573139705
+URL:https://allevents.in/wenatchee/candlelight-celtic-at-numerica-performing-arts-center/2400030573139705
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Candlelight Celtic at Numerica Performing Arts Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:c5f5cdcfa986@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270305T030000Z
 DTEND:20270305T053000Z
 SUMMARY:Singer Songwriter Storyteller: March
@@ -1027,7 +1042,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:262049ffb86e@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270307T033000Z
 DTEND:20270307T053000Z
 SUMMARY:Dylan Scott @ Town Toyota Center
@@ -1042,7 +1057,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:964348c3e4a2@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270313T030000Z
 DTEND:20270313T050000Z
 SUMMARY:Sleeping Lady Foundation’s Speaker Series: Tim Egan
@@ -1056,23 +1071,23 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:d71b0bbb5f08@wenatchee-activities
-DTSTAMP:20261113T193429Z
-DTSTART;VALUE=DATE:20270319
-DTEND;VALUE=DATE:20270320
-SUMMARY:Wenatchee Wild vs. Portland Winterhawks
-LOCATION:Town Toyota Center - Wenatchee\, Wenatchee
-DESCRIPTION:https://happeningnext.com/event/wenatchee-wild-vs-portland-winterhawks-eid3fk9peo4eq
-URL:https://happeningnext.com/event/wenatchee-wild-vs-portland-winterhawks-eid3fk9peo4eq
+UID:b2f3e8e27c4d@wenatchee-activities
+DTSTAMP:20261114T174820Z
+DTSTART;VALUE=DATE:20270313
+DTEND;VALUE=DATE:20270314
+SUMMARY:Daddy Daughter Dance
+LOCATION:Wenatchee Convention Center\, Wenatchee
+DESCRIPTION:https://allevents.in/wenatchee/daddy-daughter-dance/200030901866444
+URL:https://allevents.in/wenatchee/daddy-daughter-dance/200030901866444
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Get tickets: Wenatchee Wild vs. Portland Winterhawks
+DESCRIPTION:Get tickets: Daddy Daughter Dance
 TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:4ccde93f4fe0@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270402T020000Z
 DTEND:20270402T043000Z
 SUMMARY:Singer Songwriter Storyteller: April
@@ -1086,8 +1101,38 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
+UID:ccef8203597d@wenatchee-activities
+DTSTAMP:20261114T174820Z
+DTSTART;VALUE=DATE:20270402
+DTEND;VALUE=DATE:20270403
+SUMMARY:Yamato - The Drummers of Japan
+LOCATION:Numerica Performing Arts Center\, Wenatchee
+DESCRIPTION:https://allevents.in/wenatchee/yamato-the-drummers-of-japan/2300030584587523
+URL:https://allevents.in/wenatchee/yamato-the-drummers-of-japan/2300030584587523
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Yamato - The Drummers of Japan
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:dc1eef85491f@wenatchee-activities
+DTSTAMP:20261114T174820Z
+DTSTART;VALUE=DATE:20270402
+DTEND;VALUE=DATE:20270403
+SUMMARY:Yamato at Numerica Performing Arts Center
+LOCATION:Numerica Performing Arts Center\, Wenatchee
+DESCRIPTION:https://allevents.in/wenatchee/yamato-at-numerica-performing-arts-center/2400030581715607
+URL:https://allevents.in/wenatchee/yamato-at-numerica-performing-arts-center/2400030581715607
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Get tickets: Yamato at Numerica Performing Arts Center
+TRIGGER:-P21D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
 UID:bef7ed5b406b@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270403T160000Z
 DTEND:20270403T210000Z
 SUMMARY:The Met Opera: Manon – Massenet
@@ -1102,7 +1147,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:717395f02739@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270409T020000Z
 DTEND:20270409T043000Z
 SUMMARY:Sleeping Lady Foundation’s Speaker Series: Danielle Feinberg
@@ -1117,7 +1162,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:cabd19d9be7a@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270427T170000Z
 DTEND:20270427T210000Z
 SUMMARY:The Met Opera: Otello – Verdi
@@ -1132,7 +1177,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:f3df7304138f@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270507T020000Z
 DTEND:20270507T043000Z
 SUMMARY:Singer Songwriter Storyteller: May
@@ -1147,7 +1192,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:7828dabb4752@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20270508
 DTEND;VALUE=DATE:20270509
 SUMMARY:Traditional Maifest Celebration
@@ -1162,7 +1207,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:b9b3094ed53d@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART;VALUE=DATE:20270509
 DTEND;VALUE=DATE:20270510
 SUMMARY:Traditional Maifest Celebration
@@ -1177,7 +1222,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ad0f14402154@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270514T020000Z
 DTEND:20270514T043000Z
 SUMMARY:Sleeping Lady Foundation’s Speaker Series: Anna Lappé
@@ -1191,23 +1236,8 @@ TRIGGER:-P21D
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
-UID:a8ce77f77120@wenatchee-activities
-DTSTAMP:20261113T193429Z
-DTSTART;VALUE=DATE:20270522
-DTEND;VALUE=DATE:20270523
-SUMMARY:Card Mania #03: Arena Show
-LOCATION:Town Toyota Center\, Wenatchee
-DESCRIPTION:https://allevents.in/wenatchee/card-mania-03-arena-show/200031013315403
-URL:https://allevents.in/wenatchee/card-mania-03-arena-show/200031013315403
-BEGIN:VALARM
-ACTION:DISPLAY
-DESCRIPTION:Get tickets: Card Mania #03: Arena Show
-TRIGGER:-P21D
-END:VALARM
-END:VEVENT
-BEGIN:VEVENT
 UID:f1312d64651c@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270604T020000Z
 DTEND:20270604T043000Z
 SUMMARY:Singer Songwriter Storyteller: June
@@ -1222,7 +1252,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:ca5390513097@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270605T160000Z
 DTEND:20270605T220000Z
 SUMMARY:The Met Opera: Parsifal – Wagner
@@ -1237,7 +1267,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:0209e9686dd1@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270625T220000Z
 DTEND:20270626T000000Z
 SUMMARY:Beyond Wonderland At The Gorge 2027 @ Gorge Amphitheatre
@@ -1252,7 +1282,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:01a4adfb2daa@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270625T220000Z
 DTEND:20270626T000000Z
 SUMMARY:Beyond Wonderland Festival 2027 @ Gorge Amphitheatre
@@ -1267,7 +1297,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:481a357277a3@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270626T190000Z
 DTEND:20270626T210000Z
 SUMMARY:Beyond Wonderland PNW 2027 @ Gorge Amphitheatre
@@ -1282,7 +1312,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:5034e4abbda9@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270627T190000Z
 DTEND:20270627T210000Z
 SUMMARY:Beyond Wonderland At The Gorge 2027 @ Gorge Amphitheatre
@@ -1297,7 +1327,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:95a59ff78dff@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270703T010000Z
 DTEND:20270703T030000Z
 SUMMARY:Zach Top @ Gorge Amphitheatre
@@ -1312,7 +1342,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:7657b55bf1fd@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270822T030000Z
 DTEND:20270822T050000Z
 SUMMARY:King Gizzard & The Lizard Wizard @ The Gorge Amphitheatre
@@ -1327,7 +1357,7 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:bcaaf8379ae6@wenatchee-activities
-DTSTAMP:20261113T193429Z
+DTSTAMP:20261114T174820Z
 DTSTART:20270903T030000Z
 DTEND:20270903T050000Z
 SUMMARY:Legacy: A Pink Floyd Show @ Town Toyota Center
